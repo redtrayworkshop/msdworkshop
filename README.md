@@ -1,4 +1,0 @@
-Mark-Schneider-Design
-=====================
-
-msdworkshop
