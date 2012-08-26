@@ -1,0 +1,206 @@
+<?php
+/**
+ * @file
+ *   This module provides helper functions to use with glossy theme.
+ */
+/**
+ * Implementation of hook_init().
+ */
+function glossy_helper_init() {
+	// @todo set views name via variable_set
+}
+
+
+/**
+ * Implementation of hook_theme().
+ */
+function glossy_helper_theme() {
+  $items = array();
+	$items['glossy_footer_sublogo'] = array('variables' => array());
+	$items['ff_3d_slideshow_block'] = array('variables' => array());
+  return $items;
+}
+
+/**
+ * Implementation of hook_preprocess_page().
+ */
+function glossy_helper_preprocess_page(&$variables) {
+	if (implode('/', arg()) == 'admin/appearance/settings/glossy'){
+		$path = drupal_get_path('theme', 'glossy');
+		drupal_add_css($path . '/css/fonts-style.css', array('group' => CSS_THEME));
+		drupal_add_css($path . '/css/admin.css', array('group' => CSS_THEME));
+		drupal_add_js($path .'/js/admin.js', array('group' => JS_THEME));
+	}
+}
+
+/**
+ * Implementation of hook_block_info().
+ */
+function glossy_helper_block_info() {
+	$blocks = array();
+  $blocks['glossy_footer_sublogo'] = array( 
+    'info'       => t('Footer Sublogo'), 
+    'cache' => DRUPAL_CACHE_GLOBAL  ,
+		'visibility' => 1, 
+  );
+
+  $blocks['ff_3d_slideshow'] = array( 
+    'info'       => t('Front featured slideshow - piecemaker slider'), 
+    'cache' => DRUPAL_CACHE_GLOBAL  ,
+		'visibility' => 1, 
+  );
+  return $blocks;
+}
+
+
+/**
+ * Implementation of hook_block_view().
+ */
+function glossy_helper_block_view($delta = '') {
+	$block = array();
+	
+  switch ($delta) {
+    case 'glossy_footer_sublogo':
+			$block = array(
+				'subject' => '',
+				'content' => theme('glossy_footer_sublogo'),
+			);
+      break; 
+		
+		// Front featured slideshow - piecemaker slider
+		case 'ff_3d_slideshow':
+			$block = array(
+				'subject' => '',
+				'content' => theme('ff_3d_slideshow_block'),
+			);
+      break;
+  }
+	
+	return $block;
+}
+
+/**
+ * Theme the Footer sublogo
+ *
+ * @ingroup themeable
+ */
+function theme_glossy_footer_sublogo(){
+	$logo_path = explode("/", glossy_helper_get_theme_setting('logo'));
+	$logo_file = array_pop($logo_path);
+	$vars['item']['uri'] = "public://{$logo_file}";
+	$vars['item']['alt'] = variable_get('site_slogan', t('A Modern Drupal Theme'));
+	$vars['item']['title'] = variable_get('site_slogan', t('A Modern Drupal Theme'));
+	$vars['image_style'] = variable_get('glossy_style_footer_sublogo', 'footer_sublogo');
+	
+	$output = '<div id="footer-sublogo">';
+	
+	$output .= '<div class="logo-img">';
+	$output .= l(theme_image_formatter($vars),	base_path(), array('html' => TRUE, 'external' => TRUE));
+	$output .= '</div>';
+	
+	$output .= '<h6 class="site-slogan">' . variable_get('site_slogan', 'A Modern Drupal Theme') . '</h6>';
+	$output .= '</div>';
+	return $output;
+}
+
+/**
+ * Theme the front featured slideshow (piecemaker slider) block.
+ *
+ * @ingroup themeable
+ */
+function theme_ff_3d_slideshow_block(){
+	 drupal_load('module', 'piecemaker');
+	 drupal_load('module', 'libraries');
+	 
+	if (!count(piecemaker_profile_options())){
+		return drupal_set_message('please choose piecemaker profile to use with this block.');
+	}
+	$pid = glossy_helper_get_theme_setting('ff_piecemaker_pid');
+	
+  $settings = &drupal_static('theme_piecemaker_settings');
+  $ids = &drupal_static(__FUNCTION__, array());
+  $handler = 'ff_3d_slider';
+  $key = '1';
+
+  
+ // $xml['Settings'] = $profile['settings'];
+ // $xml['Transitions'] = $profile['transitions'];
+	
+	
+  $profile = piecemaker_profile_load($pid);
+  if (is_object($profile)) {
+    //Cast the profile to an array to make it easier to use
+    $profile = (array) $profile;
+  }
+  $id = 'piecemaker-' . $handler . '-' . $key;
+  $i = 0;
+  while (in_array($id, $ids)) {
+    //Ensure we have a unique html ID to use.
+    $id .= '-' . $i;
+    $i++;
+  }
+  //Store this id
+  $ids[] = $id;
+  $pm_path = libraries_get_path('piecemaker');
+  $path = drupal_get_path('module', 'piecemaker');
+  //Add The JS we need
+  drupal_add_js($pm_path . '/swfobject/swfobject.js', array('group' => JS_LIBRARY));
+  drupal_add_js($path . '/js/Piecemaker.js', array('group' => JS_THEME));
+  
+ 
+  $settings['Piecemaker_URI'] = base_path() . $pm_path;
+  $settings['Piecemaker'][$id] = array(
+    'id' => $id,
+    'flashvars' => array(
+       'xmlSource' => url("ff_xml_source.xml"),
+       'cssSource' => url($profile['flash_settings']['flashvars']['cssSource']),
+     ),
+     'width' => $profile['flash_settings']['width'],
+     'height' => $profile['flash_settings']['height'],
+  );
+	
+  $settings['Piecemaker'][$id]['params'] = $profile['flash_settings']['params'];
+  $alternate = '<p>You do not have flash enabled</p>';
+
+  $out = "<div id=\"{$id}\" class=\"piecemaker piecemaker-{$handler} piecemaker-{$handler}-{$key}\">
+  {$alternate}
+   </div>";
+   return $out;
+}
+
+/**
+ * Get given theme setting value
+ */
+function glossy_helper_get_theme_setting($setting, $default = null, $theme = 'glossy'){
+	require_once drupal_get_path('module', 'system') . '/system.module';
+	$return = theme_get_setting($setting, $theme);
+	return isset($return) ? $return : $default;
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function glossy_helper_form_alter(&$form, $form_state, $form_id){
+  switch ($form_id) {
+		// alternate user login block
+		case 'user_login_block':
+			$items = array();
+			if (variable_get('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL)) {
+				$items[] = l(t('Join'), 'user/register', array('attributes' => array('title' => t('Create a new user account.'))));
+			}
+			$items[] = l(t('Lost password'), 'user/password', array('attributes' => array('title' => t('Request new password via e-mail.'))));
+			$form['links'] = array('#markup' => theme('item_list', array('items' => $items, 'attributes' => array('class' => 'fancy_list'))), '#prefix' => '<div class="clearfix login-options">', '#suffix' => '</div>');
+			break;
+	}
+	
+	// alternate user login block
+	if (strstr($form_id, 'comment_node_')) {
+		$form['author']['name']['#size'] = 60;
+	}
+}
+/**
+ * Implements hook_block_view_MODULE_DELTA_alter().
+ */
+function glossy_helper_block_view_locationmap_image_alter(&$data, $block) {
+		$data['content'] = ($data['content']) ? check_markup($data['content'], 'full_html') : '';
+}

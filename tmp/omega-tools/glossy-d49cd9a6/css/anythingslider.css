@@ -1,0 +1,195 @@
+/*
+	AnythingSlider v1.7+ Default (base) theme
+	By Chris Coyier: http://css-tricks.com
+	with major improvements by Doug Neiner: http://pixelgraphics.us/
+	based on work by Remy Sharp: http://jqueryfordesigners.com/
+*/
+
+/*****************************
+  SET DEFAULT DIMENSIONS HERE
+ *****************************/
+/* change the ID to match your slider */
+.view-display-id-ff_AnythingSlider 
+{
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 2em 0 4em;
+	width: 1180px !important;
+	text-align: center;
+	height: 375px;
+	position: relative;
+}
+
+
+.view-display-id-ff_AnythingSlider  .views-row 
+{
+    position: relative;
+    width: 1180px;
+}
+
+.view-display-id-ff_AnythingSlider  .field-content a
+{
+    display: block;
+		text-align: left;
+}
+
+.view-display-id-ff_AnythingSlider  span.title
+{
+    display: none;
+}
+
+/* Opera width restriction */
+.anythingBase { max-width: 32766px; }
+
+.view-display-id-ff_AnythingSlider .anythingControls ul
+{
+	text-align: center;
+	margin: 1.5em auto;
+	padding: 0;
+	float: none; 
+	list-style: none;
+}
+
+.view-display-id-ff_AnythingSlider .anythingControls ul li {background: none; padding: 0;}
+/* Navigation buttons, default state */
+.view-display-id-ff_AnythingSlider .anythingControls ul a.cur, .view-display-id-ff_AnythingSlider .anythingControls ul a {
+	background: url('../img/slider_inactive.png') no-repeat; 
+	text-indent: -9999em;
+	width:15px;
+	height:15px;
+	display: inline-block;
+	margin-right: 5px;
+	color: #000;
+}
+
+.view-display-id-ff_AnythingSlider .anythingControls ul a.cur
+{
+	background: url('../img/slider_active.png') no-repeat; 
+}
+
+/***********************
+  COMMON SLIDER STYLING
+ ***********************/
+/* anythingSlider viewport window */
+.view-display-id-ff_AnythingSlider .anythingWindow {
+	overflow: hidden;
+	position: relative;
+	 /*width: 1200px;*/
+	height: 352px !important;
+}
+/* anythingSlider base (original element) */
+.anythingBase {
+	background: transparent;
+	list-style: none;
+	position: absolute;
+	overflow: visible !important;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+}
+/* all panels inside the slider */
+.anythingBase .panel {
+	background: transparent;
+	display: block;
+	overflow: hidden;
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+.anythingBase .panel.vertical {
+	float: none;
+}
+
+/* Navigation Arrows */
+.view-display-id-ff_AnythingSlider .arrow {
+	top: 50%;
+	position: absolute;
+	display: block;
+}
+.view-display-id-ff_AnythingSlider .arrow a {
+	display: block;
+	height: 140px;
+	margin: -70px 0 0 0; /* half height of image */
+	width: 45px;
+	text-align: center;
+	outline: 0;
+}
+/* hide text, target the span so IE7 doesn't text-indent the link */
+.view-display-id-ff_AnythingSlider .arrow a span { display: block; text-indent: -9999px; }
+/* back arrow */
+.view-display-id-ff_AnythingSlider .back { left: 0; }
+.view-display-id-ff_AnythingSlider .back a { background-position: left top; }
+.view-display-id-ff_AnythingSlider .back a:hover, .view-display-id-ff_AnythingSlider .back a.hover { background-position: left -140px; }
+.view-display-id-ff_AnythingSlider .back.disabled { display: none; } /* disabled arrows, hide or reduce opacity: opacity: .5; filter: alpha(opacity=50); */
+/* forward arrow */
+.view-display-id-ff_AnythingSlider .forward { right: 0; }
+.view-display-id-ff_AnythingSlider .forward a { background-position: right top; }
+.view-display-id-ff_AnythingSlider .forward a:hover, .view-display-id-ff_AnythingSlider .forward a.hover { background-position: right -140px; }
+.view-display-id-ff_AnythingSlider .forward.disabled { display: none; } /* disabled arrows, hide or reduce opacity: opacity: .5; filter: alpha(opacity=50); */
+
+/* Navigation Links */
+.view-display-id-ff_AnythingSlider .anythingControls { outline: 0; display: none; }
+.view-display-id-ff_AnythingSlider .anythingControls ul li { display: inline; margin: 0;}
+
+/* Navigation size window */
+.view-display-id-ff_AnythingSlider .anythingControls .anythingNavWindow { overflow: hidden; float: left; }
+
+/* slider autoplay right-to-left, reverse order of nav links to look better */
+.view-display-id-ff_AnythingSlider.rtl .anythingControls ul a { float: right; } /* reverse order of nav links */
+.view-display-id-ff_AnythingSlider.rtl .anythingControls ul { float: left; }    /* move nav link group to left */
+.view-display-id-ff_AnythingSlider.rtl .anythingWindow {
+	direction: ltr;
+	unicode-bidi: bidi-override;
+}
+/* .view-display-id-ff_AnythingSlider.rtl .start-stop { float: right; } */ /* move start/stop button - in case you want to switch sides */
+
+/* Autoplay Start/Stop button */
+.view-display-id-ff_AnythingSlider .play_control 
+{
+	height: 0;
+}
+
+.view-display-id-ff_AnythingSlider .start-stop {
+	position: absolute;
+	left: 50px;
+	top: 75px;
+	z-index: 2;
+	display: block;
+	background: url(../img/play.png) no-repeat;
+	width: 46px;
+	height: 46px;
+	text-indent: -999em;
+	opacity: .2;
+}
+
+/* start-stop button, playing, default state */
+.view-display-id-ff_AnythingSlider .start-stop.playing 
+{
+	background: url(../img/pause.png) no-repeat;
+}
+
+/** Caption **/
+.view-display-id-ff_AnythingSlider .field-content
+{
+	position: relative;
+}
+
+.view-display-id-ff_AnythingSlider .caption
+{
+	background: url(../img/caption_bg.png);
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	z-index: 3;
+	font-size: 1em;
+}
+
+.view-display-id-ff_AnythingSlider .caption .inner
+{
+    color: #FFFFFF;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 1em;
+}

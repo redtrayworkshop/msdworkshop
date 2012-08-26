@@ -1,0 +1,60 @@
+/**
+ * @file testimonials.css
+ *	styling recent testimonials
+ */
+#recent-testimonials
+{
+  padding-bottom: 50px;
+	position: relative;
+}
+
+#recent-testimonials .inner
+{
+	position: relative;
+}
+
+#recent-testimonials .content
+{
+	padding: 15px 20px 45px;
+	border-width: 5px;
+}
+
+#recent-testimonials .box-arrow{
+    background: none !important;
+    height: 0 !important;
+		position: absolute;
+		width: 0 !important;
+    display: block;
+    z-index: 3001;
+		border: 10px solid transparent;
+    left: 30px;
+    top: 100%;
+    margin-left: -10px;
+}
+
+#recent-testimonials .views-field-field-testimonial-signature
+{
+    color: #AAAAAA;
+    padding: 15px 0 0;
+}
+
+
+.testimonial_nav
+{
+	bottom: 105px;
+	position: absolute;
+	right: 20px;
+}
+
+.testimonial_prev, .testimonial_next
+{
+	text-indent: -9999em;
+	width: 12px; 
+	height: 12px;
+	display: block;
+	float: left;
+	margin-left: 5px;
+	cursor: pointer;
+}
+body div .testimonial_prev{background-position: 0 -100px;}
+body div .testimonial_next{background-position: -50px -950px;}

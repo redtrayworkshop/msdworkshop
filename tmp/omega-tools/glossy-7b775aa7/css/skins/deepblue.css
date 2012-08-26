@@ -1,0 +1,267 @@
+/**
+ * @file deepblue.css
+ * 	deepblue Skin
+ * 	main color : #092334
+ */
+ 
+/*======================================================================================*/
+/*	body, common classes, structure etc
+/*======================================================================================*/
+
+h1, h2, h3, h4, h5, h6
+{
+	color: #535252;
+}
+
+::selection {background: #092334; color: #f8f8f8;}
+::-moz-selection {background: #092334; color: #f8f8f8;}
+/*================================================================================================*/
+/*	Zones
+/*================================================================================================*/
+#zone-user-wrapper,
+#bottom-bar-outer
+{
+	background:#213746;
+	border-bottom: 1px solid #182833;
+	border-top: 1px solid #182833;
+}
+
+/*================================================================================================*/
+/*	Composite
+/*================================================================================================*/
+.breadcrumb a.front, 
+#block-comment-recent li a,
+.view .date-nav-wrapper .date-prev a,
+.view .date-nav-wrapper .date-prev a:hover,
+.view .date-nav-wrapper .date-next a,
+.view .date-nav-wrapper .date-next a:hover,
+html.js fieldset.collapsible .fieldset-legend,
+.feed-icon span,
+.node .title_groups .comments_count,
+.contact_widget_address,
+.contact_widget_name,
+.contact_widget_phone,
+.contact_widget_email,
+.fancy_list li,
+.fancy-list li,
+.sitemap_list li,
+.dropcap,
+.dropcap3, 
+blockquote, 
+#page .toggle,
+#page .toggle_accordion, 
+.testimonial_prev,
+.testimonial_next,
+.fancy_link
+{
+	background-image: url(../../img/shortcodes/sprites/custom_sprite_092334.png);
+	background-repeat: no-repeat;	
+}
+
+a,
+li a.active,
+.comment .left-column .username
+{
+		color: #3b3b3b;
+}
+
+a:hover,
+#breadcrumb a:hover,.header a:hover,
+.region-sidebar-second .block.block-menu li a.active,
+.view-portfolio .element.hovered a.title,
+li a.active:hover, 
+body div.region .boxed a:hover, 
+body div.region .messages a:hover
+{
+		color: #092334;
+}
+
+.breadcrumb a.front, 
+#block-comment-recent ul li a
+{
+	padding-left: 22px;
+}
+
+#header-main-content
+{
+	background: #435a69 url('deepblue/header-main-content-inner--bg.jpg') repeat-x center bottom;
+	border-top: 1px solid #62859A;
+}
+
+#header-main-content-inner
+{
+	background:url("../../img/bg/rays-big.png") no-repeat scroll center top transparent;
+}
+
+body div.region .site-slogan
+{
+	color: #fff;
+}
+
+/*================================================================================================*/
+/*	Slideshow region
+/*================================================================================================*/
+#main-content-zone-outter
+{
+	background:url("deepblue/slideshow-region-bg-center.jpg") repeat-x scroll center bottom #0f181f;
+}
+
+/*================================================================================================*/
+/*	Footer section styles
+/*================================================================================================*/
+ .section-footer
+{
+	background:#304c5f url('deepblue/section-footer--bg.jpg') repeat-x;
+}
+
+ .section-footer .block-title
+{
+	color: #DDDDDD;
+}
+
+#region-footer-first
+{
+	background:url('deepblue/footer--hr.jpg') repeat-x scroll left bottom;
+}
+
+.zone-footer .content *,
+#bottom-bar-outer *, #zone-user-wrapper * 
+{
+	color: #aaa
+}
+
+.zone-footer .content a,
+.main-menu li a span.description,
+#bottom-bar-outer a, #zone-user-wrapper a
+
+{
+    color: #DDDDDD;
+}
+
+.zone-footer input, 
+.zone-footer textarea
+{
+	border-top:1px solid #253B49;
+	color: #505356;
+	-moz-box-shadow: 0 0 1px rgba(0, 0, 0, .2);
+	-webkit-box-shadow:inset 0 0 1px rgba(0, 0, 0, .2);
+	box-shadow: 0 0 1px rgba(0, 0, 0, .2);
+	resize: none;
+}
+
+ .section-footer input:focus,  .section-footer textarea:focus
+{
+	border-top-color: rgba(255, 255, 255, .3);
+}
+
+.highlight, .dropcap4, 
+#bottom-bar-outer a:hover, 
+.zone-footer .content a:hover,
+.comments_count a,
+.main-menu li a,.main-menu li a.active,
+#bottom-bar-outer a:hover, #zone-user-wrapper a:hover
+{
+	color: #fff;
+}
+
+/*================================================================================================*/
+/*	Composed Styles
+/*================================================================================================*/
+body div #recent-testimonials .inner
+{
+    color: #444444 !important;
+}
+
+body div #recent-testimonials .content
+{
+	border-color: #fff;
+}
+
+body div #recent-testimonials .box-arrow
+{
+	border-top-color: #fff;
+}
+
+/*================================================================================================*/
+/*	Images
+/*================================================================================================*/
+#zone-footer .view-recent-blog-posts img,
+#zone-footer #block-locationmap-image img, 
+.blocky-views img
+{
+	background: #ddd;
+}
+
+/*================================================================================================*/
+/*	Buttons
+/*================================================================================================*/
+th,
+.form-submit,
+.more-link a,
+.button_link, 
+.highlight, .dropcap4, 
+ul.action-links a, .mobileMenu,
+.fancy_header span,
+input.form-submit,
+.more-link a,
+.quicktabs-tabs li.active a,
+.calendar-links.day .calendar-day a,
+.calendar-links.week .calendar-week a,
+.calendar-links.month .calendar-month a,
+.calendar-links.year .calendar-year a,
+#iso-options li.active a, 
+body ul.tabs li.active a, 
+.titled_box_title, 
+.colored_box,
+div.zone-footer input.form-submit,
+div.zone-footer .more-link a
+{
+	border-color: #092334;
+	background-color: #092334;
+}
+
+/*================================================================================================*/
+/*	Main Navigation Superfish Menu
+/*================================================================================================*/
+.main-menu li.first-depth a
+{
+	background: transparent url("deepblue/main-menu-left-border.jpg") no-repeat 0 .5em;
+}
+
+.main-menu li.expanded.first-depth.sfHover a,
+.main-menu li.expanded.first-depth a:hover,
+.main-menu li:hover ul,
+.main-menu li.sfHover ul
+{
+		background: #192B39;
+}
+
+.main-menu li a.active span.description,
+.main-menu li a:hover span.description,
+.main-menu li.sfHover a span.description, 
+body div .titled_box_title
+{
+	color: #fff;
+}
+
+
+.main-menu li.expanded.first-depth ul a:hover,
+.main-menu ul li a.active
+{
+	background: #213746 !important;
+	border-radius: 5px;
+}
+
+/*============================================================================================*/
+/*	Composed
+/*============================================================================================*/
+#zone-user .nice-menu li a
+{
+	border-right: 1px solid #23282c;
+}
+
+.zone-user .follow-links a,
+.zone-bottom-bar .follow-links a
+{
+	background-image: url('../../img/so-icons_white.png');
+}

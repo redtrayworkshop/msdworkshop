@@ -1,0 +1,16 @@
+Shortcode 7.x-2.x, xxxx-xx-xx                                                                                                               
+------------------------------ 
+
+
+Shortcode 7.x-2.x, 2012-03-10                                                                                                               
+------------------------------ 
+
+by Denes.Szabo: Updated the code tips, now all translateable.
+by Denes.Szabo: Updated to use new attr handling method to help code editors.
+by Denes.Szabo: Lots of fixes and cleanups
+by Denes.szabo: Fixed multi text format handling in one content.
+#1469108 by Nick Cash: Fixed a missing object creation.
+#1469132 by Nick Cash: Removed theme alter.
+by Denes.szabo: Added documentation to the functions.
+by Denes.szabo: Renamed the shortcode_embed_content module.
+

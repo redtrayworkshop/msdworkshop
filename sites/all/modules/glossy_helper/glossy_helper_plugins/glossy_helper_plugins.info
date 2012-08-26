@@ -1,0 +1,12 @@
+core = "7.x"
+dependencies[] = "wysiwyg"
+dependencies[] = "glossy_helper"
+description = "A wysiwyg editor extension including shortcodes buttons."
+files[] = "glossy_helper_tags.module"
+name = "Glossy Shortcodes wysiwyg plugin"
+package = "glossy"
+php = "5.2.4"
+recommends[] = "media_browser_plus"
+recommends[] = "styles_ui"
+recommends[] = "transliteration"
+

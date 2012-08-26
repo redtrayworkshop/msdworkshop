@@ -1,0 +1,6 @@
+name = Glossy Helper
+description = Adds helper function to Glossy theme.
+package = "glossy"
+core = 7.x
+version = "7.x-2.x-dev"
+files[] = glossy_helper.module 

@@ -1,0 +1,11 @@
+/** Remove responsive from images **/
+img,
+a.lightbox-processed, 
+.hover-fade a{width: auto !important;}
+
+
+.section-content .node .field-type-image img, .section-content .author-avatar img, .section-content .user-picture img, .section-content .view-portfolio img, .section-content .portfolio-images, .section-content #block-locationmap-image img, .section-content .blocky-views img, .section-content .framed, .section-content #location_map_outter, .section-content .pullquote, .section-content .video_frame, .section-content #block-views-node-bottom-blocks-about-author .block-inner, .section-content .calendar-calendar .month-view table, .section-content .calendar-calendar .day-view, .section-content .calendar-calendar .week-view, .section-content #search-form, .section-content .fancy_table table, .section-content .titled_box_content, .section-content .fancy_box, #page .toggle_framed, .section-content #recent-testimonials .content {
+	filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=1, OffY=1 Color=#DFDFDF) !important;
+}
+
+input.form-text,input.form-textarea{padding-top:.5em !important}

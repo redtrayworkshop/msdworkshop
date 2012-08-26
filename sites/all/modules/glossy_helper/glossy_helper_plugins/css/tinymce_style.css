@@ -1,0 +1,27 @@
+
+/**
+ * TinyMCE 3.x
+ */
+
+.red{background-color:#700 !important;border-color:#700 !important;}
+.orange{background-color:#e98813 !important;border-color:#e98813 !important;}
+.yellow{background-color:#f7c808 !important;border-color:#f7c808 !important;}
+.green{background-color:#74941f !important;border-color:#74941f !important;}
+.olive{background-color:#3a491a !important;border-color:#3a491a !important;}
+.teal{background-color:#089 !important;border-color:#089 !important;}
+.blue{background-color:#00437f !important;border-color:#00437f !important;}
+.deepblue{background-color:#092334 !important;border-color:#092334 !important;}
+.purple{background-color:#4b2c5a !important;border-color:#4b2c5a !important;}
+.hotpink{background-color:#bc006e !important;border-color:#bc006e !important;}
+.slategrey{background-color:#3b424a !important;border-color:#3b424a !important;}
+.mauve{background-color:#625b56 !important;border-color:#625b56 !important;}
+.pearl{background-color:#ab998f !important;border-color:#ab998f !important;}
+.steelblue{background-color:#788794 !important;border-color:#788794 !important;}
+.mossgreen{background-color:#717a75 !important;border-color:#717a75 !important;}
+.wheat{background-color:#79745d !important;border-color:#79745d !important;}
+.coffee{background-color:#372e25 !important;border-color:#372e25 !important;}
+.copper{background-color:#6b3c02 !important;border-color:#6b3c02 !important;}
+.silver{background-color:#ddd !important;border-color:#d0d0d0 !important;color:#444!important;}
+.black{background-color:#111 !important;border-color:#111 !important;}
+.white{background-color:#fff !important;border-color:#eee !important;color:#aaa!important;}
+.black span.mceText{color:#fff!important;}

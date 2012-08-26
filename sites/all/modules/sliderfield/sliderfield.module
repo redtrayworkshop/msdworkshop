@@ -1,0 +1,180 @@
+<?php
+
+/**
+ * @file
+ * Defines a Slider widget for use with decimal, number, and float fields.
+ */
+
+/**
+ * Implements hook_field_widget_info().
+ *
+ * Defines the sliderfield widget which is available for decimal, number, and
+ * float fields.
+ */
+function sliderfield_field_widget_info() {
+  return array(
+    'sliderfield_basic' => array(
+    'label' => t('Number Slider'),
+    'field types' => array('number_decimal', 'number_integer', 'number_float'),
+    'settings' => array('step' => 1),
+    'behaviors' => array(
+      'multiple values' => FIELD_BEHAVIOR_DEFAULT,
+      'default value' => FIELD_BEHAVIOR_DEFAULT,
+      ),
+    ),
+    'sliderfield_adjust' => array(
+    'label' => t('Number Slider (adjustable - experimental)'),
+    'field types' => array('number_decimal', 'number_integer', 'number_float'),
+    'settings' => array('step' => 1),
+    'behaviors' => array(
+      'multiple values' => FIELD_BEHAVIOR_DEFAULT,
+      'default value' => FIELD_BEHAVIOR_DEFAULT,
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_widget_form().
+ */
+function sliderfield_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
+  // Use the default number field widget as a base.
+  $element += number_field_widget_form($form, $form_state, $field, $instance, $langcode, $items, $delta, $element);
+  $element['value']['#process'][] = '_sliderfield_process';
+  $element['#delta'] = $delta;
+  return $element;
+}
+
+/**
+ * Helper function to add jQuery.UI Sliderfield widget to textfield.
+ */
+function _sliderfield_process($element, &$form_state, $form) {
+  $instance = field_widget_instance($element, $form_state);
+  $widget_settings = $instance['widget']['settings'];
+  $settings = array();
+  
+  switch ($instance['widget']['type']) {
+    case 'sliderfield_adjust':
+      $settings += array(
+        'adjust' => isset($widget_settings['sliderfield_adjust_field'])? drupal_clean_css_identifier($widget_settings['sliderfield_adjust_field']) : '',
+      );
+ 
+      // DELIBERATE fall-through: From here on the sliderfield_adjust widget is
+      // exactly the same as sliderfield_basic.
+      case 'sliderfield_basic':
+        $element['#suffix'] = '<div class="sliderfield-slider"></div>';
+        $element['#attributes']['class'][]  = "edit-sliderfield-slider";
+
+        // Add supporting javascript library.
+        $element['#attached']['library'] = array(
+          array('system', 'ui.slider'),
+        );
+
+        // Add javascript to trigger the slider.
+        $element['#attached']['js'][] = drupal_get_path('module', 'sliderfield') . '/sliderfield.js';
+
+        // Add basic javascript settings.
+        $settings += array(
+          'step' => $widget_settings['step'] ? $widget_settings['step'] : 1,
+          'min' => $instance['settings']['min'],
+          'max' => $instance['settings']['max'],
+          'val' => $element['#value'] ? $element['#value'] : $instance['settings']['min'],
+        );
+       
+        // Add the complete set of javascript settings
+        $settings = array($element['#id'] => $settings);
+        $element['#attached']['js'][] = array(
+          'data' => array('sliderfield' => $settings),
+          'type' => 'setting',
+          'scope' => 'header',
+        );
+        break;
+  }
+  return $element;
+}
+
+/**
+ * Implements hook_field_widget_form_alter().
+ *
+ * Add a css class to adjustment form elements, to enable them to be targeted
+ * by the appropriate javascript.
+ */
+function sliderfield_field_widget_form_alter(&$element, &$form_state, $context) {
+  $instance = $context['instance'];
+  if ($instance['widget']['type'] == 'number') {
+    $entity_fields = field_info_instances($instance['entity_type'], $instance['bundle']);
+    if (array_key_exists($instance['field_name'], $entity_fields)) {
+      $element['value']['#process'][] = '_sliderfield_adjust_process';
+    }
+  }
+}
+
+/**
+ * Helper function to add css class to adjustment elements.
+ */
+function _sliderfield_adjust_process($element, &$form_state, $form) {
+  $instance = field_widget_instance($element, $form_state);
+  $widget_settings = $instance['widget']['settings'];
+  $element['#attributes']['class'][] = 'sliderfield-adjust-'.drupal_clean_css_identifier($element['#field_name']);
+  return $element;
+}
+
+/**
+ * Implements hook_field_widget_settings_form().
+ */
+function sliderfield_field_widget_settings_form($this_field, $instance) {
+  $widget = $instance['widget'];
+  $settings = $widget['settings'];
+  
+  switch ($widget['type']) {
+    case 'sliderfield_basic':
+      $form['step'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Step'),
+        '#default_value' =>  isset($settings['step']) ? $settings['step']:1,
+        '#description' => t('The step that the slider should use.'),
+        '#element_validate' => array('_element_validate_number'),
+        '#required' => TRUE,
+      );
+      break;
+      
+    case 'sliderfield_adjust':
+      $entity_fields = field_info_instances($instance['entity_type'], $instance['bundle']);
+      $all_fields = field_info_fields();
+      $supported_field_types = array('number_decimal', 'number_integer', 'number_float');
+      $valid_fields = array();
+
+      // Get a list of all valid fields that we both support and are part of this entity
+      foreach ($all_fields as $field) {
+        if (array_key_exists($field['field_name'], $entity_fields)) {
+          if (in_array($field['type'], array_values($supported_field_types)) && ($field['field_name'] != $this_field['field_name'])) {
+            $valid_fields[$field['field_name']] = $entity_fields[$field['field_name']]['label'];
+          }
+        }
+      }
+
+      $valid_fields = array('' => '--') + $valid_fields;
+      $form['sliderfield_adjust_field'] = array(
+        '#type' => 'select',
+        '#title' => t('Adjust the Maximum value from field'),
+        '#default_value' => isset($settings['sliderfield_adjust_field']) ? $settings['sliderfield_adjust_field']: '',
+        '#options' => $valid_fields,
+        '#description' => t('Select which field you would like to use to adjust the slider\'s Maximum value.'),
+      );
+
+      break;
+  }
+  return $form;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Make min/max required when using the sliderfield widgets.
+ */
+function sliderfield_form_field_ui_field_edit_form_alter(&$form, &$form_state, $form_id) {
+  if (in_array($form['#instance']['widget']['type'], array('sliderfield_basic', 'sliderfield_adjust'))) {
+    $form['instance']['settings']['min']['#required'] = TRUE;
+    $form['instance']['settings']['max']['#required'] = TRUE;
+  }
+}

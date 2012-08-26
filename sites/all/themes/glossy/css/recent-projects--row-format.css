@@ -1,0 +1,37 @@
+/**
+ * @file recent-projects--row-format.css
+ *	recent projects - row format styles
+ */
+.view-display-id-row_format .views-row
+{
+	max-width: 23.4509090909091%;
+	width: 23.45909090909091%;
+	float: left;
+	margin: 0 9px;
+}
+
+.view-display-id-row_format .views-row-first{margin-left: 0;}
+.view-display-id-row_format .views-row-last{margin-right: 0;}
+
+
+.view-display-id-row_format .main-content
+{
+	clear: both;
+}
+
+.view-display-id-row_format .framed
+{
+	max-width: 95.5862%;
+}
+
+.view-display-id-row_format h3
+{
+	padding-top: 1em;
+	margin-bottom: 0.4em;
+}
+
+
+.view-display-id-row_format .views-field-path
+{
+	margin-top: 1em;
+}

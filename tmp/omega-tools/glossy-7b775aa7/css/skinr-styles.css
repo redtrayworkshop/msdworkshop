@@ -1,0 +1,285 @@
+/* @group skinr ------------------------------------ */
+.hide-title h1.title,
+.hide-title h2,
+.hide-title h3 {
+  display: none;
+}
+.align-left {
+  text-align: left;
+}
+.align-center {
+  text-align: center;
+}
+.align-right {
+  text-align: right;
+}
+.sm-font {
+  font-size: 0.85em;
+  line-height: 1.2em;
+}
+.md-font {
+  font-size: 1.1em;
+  line-height: 1.3em;
+}
+.lg-font {
+  font-size: 1.5;
+}
+.ex-font {
+  font-size: 2em;
+}
+.giant {
+  font-size: 2.5em;
+}
+.uppercase *
+{
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+div .capitalize {
+  text-transform: capitalize;
+}
+/** List style **/
+body div .region .inline-list ul li{display: inline-block; float: left; margin-right: 1em /** LTR **/}
+body div .region .inline-list ul.menu a{padding: 0}
+body div .region .blocky-list ul li{display: block; float: none;}
+/*---widths---*/
+.width-100 {
+  width: 100%;
+}
+.width-75 {
+  float: left;
+  width: 73%;
+}
+.width-50 {
+  float: left;
+  width: 48%;
+}
+.width-33 {
+  float: left;
+  width: 32%;
+}
+.width-25 {
+  float: left;
+  width: 23%;
+}
+#content-top .width-75,
+#content-inner .width-75 {
+  width: 71%;
+}
+#content-top .width-50,
+#content-inner .width-50 {
+  width: 46%;
+}
+#content-top .width-33,
+#content-inner .width-33 {
+  width: 29%;
+}
+#content-top .width-25,
+#content-inner .width-25 {
+  width: 22%;
+}
+/*----margins----*/
+.top-10 {
+  margin-top: 10px;
+}
+.right-10 {
+  margin-right: 10px;
+}
+.bottom-10 {
+  margin-bottom: 10px;
+}
+.left-10 {
+  margin-left: 10px;
+}
+
+/*---blocks---*/
+.ohead h3 {
+  background: #EF9F20;
+  color: #fff;
+  line-height: 1.4em;
+  padding: 0 5px;
+}
+.gborder {
+  border: 1px solid #ddd;
+  padding: 5px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.gbox {
+  background: #e5e5e5;
+  padding: 5px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.gbox .block-inner {
+  background: #fefefe;
+}
+
+/** One level links with separators
+/**-------------------------------------------------------------------------------------*/
+.inline-links ul li 
+{
+	display: block;
+	float: left;
+	margin-right: .7em;
+	margin-bottom: .7em;
+}
+
+.inline-links ul li a
+{
+	padding-right: .7em;
+	background: url(../img/hor-sep.png) repeat-y right top;
+}
+
+.inline-links ul li.last,
+.inline-links ul li.views-row-last
+{
+  border-right: none;
+}
+
+.inline-links ul ul 
+{
+  display: none;
+}
+
+
+/** Links as columns with sub-options below  **/
+body div .column-links ul 
+{
+  padding: 0;
+	margin: 0;
+}
+
+body div .column-links ul li 
+{
+  display: inline;
+  display: inline-block;
+  float: left;
+  list-style: none;
+  margin: 0 50px 0 0;
+  position: relative;
+  vertical-align: top;
+}
+
+body div .column-links ul li a 
+{
+  font-weight: bold;
+}
+
+body div .column-links ul li ul 
+{
+  display: block;
+  position: relative;
+}
+
+body div .column-links ul li ul li 
+{
+  display: block;
+  float: none;
+  margin: 0;
+}
+
+body div .column-links ul li ul li a 
+{
+  font-weight: normal;
+  font-size: 0.9em;
+  line-height: 1em;
+}
+
+body div .column-links ul li ul li ul  
+{
+  padding: 0 0 0 10px;
+}
+
+body div .column-links ul li ul li ul  {
+  padding: 0 0 0 10px;
+}
+
+/*-----fonts----*/
+.serif-heading h1,
+.serif-heading h1 a,
+.serif-heading h2,
+.serif-heading h2 a,
+.serif-heading h3,
+.serif-heading h3 a,
+.serif-heading h4,
+.serif-heading h4 a,
+.serif-heading h5,
+.serif-heading h5 a {
+  font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+}
+.serif-all,
+.serif-all input {
+  font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+}
+.lucida-heading h1,
+.lucida-heading h1 a,
+.lucida-heading h2,
+.lucida-heading h2 a,
+.lucida-heading h3,
+.lucida-heading h3 a,
+.lucida-heading h4,
+.lucida-heading h4 a,
+.lucida-heading h5,
+.lucida-heading h5 a {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+}
+.lucida-all,
+.lucida-all input {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  font-size: 0.9em;
+}
+.mono-heading h1,
+.mono-heading h1 a,
+.mono-heading h2,
+.mono-heading h2 a,
+.mono-heading h3,
+.mono-heading h3 a,
+.mono-heading h4,
+.mono-heading h4 a,
+.mono-heading h5,
+.mono-heading h5 a {
+  font-family: Consolas, "Courier New", "Courier", mono;
+}
+.mono-all,
+.mono-all input {
+  font-family: Consolas, "Courier New", "Courier", mono;
+}
+.verdana-heading h1,
+.verdana-heading h1 a,
+.verdana-heading h2,
+.verdana-heading h2 a,
+.verdana-heading h3,
+.verdana-heading h3 a,
+.verdana-heading h4,
+.verdana-heading h4 a,
+.verdana-heading h5,
+.verdana-heading h5 a {
+  font-family: Verdana, Geneva, sans-serif;
+}
+.verdana-all,
+.verdana-all input {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 0.9em;
+}
+
+/*==================================================*/
+/* #Misc Styling
+/*==================================================*/
+.no-block-title .block-title{display: none;}
+
+/*==================================================*/
+/* #Views Styling
+/*==================================================*/
+
+/* #Blocky Views Style - class(blocky-views)
+/*==================================================*/
+.blocky-views .alignleft  img
+{
+	margin-right: 10px;
+}
+/* @end */

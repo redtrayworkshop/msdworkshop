@@ -1,0 +1,93 @@
+
+/*----------BASE STYLING--------*/
+
+h1, h2, h3, h4, h5, h6, th,
+.portfolio-images .caption p, 
+.form-submit,
+div.zone-footer input.form-submit,
+.more-link a,
+div.zone-footer .more-link a,
+.quicktabs-style-nostyle .quicktabs-tabs li a, 
+.calendar-links a,
+body ul.tabs li a,
+#iso-filters li a, 
+.column-links ul li a,
+#imageData #caption,
+#header-main-content .navigation li a,
+.orbit-caption *,
+.nivo-caption .header,
+.view-display-id-ff_AnythingSlider .caption,
+.intro-message,
+.teaser_normal,
+.teaser_large,
+#renews a{font-family: 'ff-meta-web-pro' !important;}
+
+body {font-size: 14px;}
+
+
+
+body, 
+.block-follow-site .block-title, 
+.column-links ul li ul li a,
+#header-main-content .navigation li a span.description, 
+#header-main-content .navigation li li a,
+.block-views-node-bottom-blocks-about-author .block-title,
+.pullquote,.pullquote2,.pullquote3,.pullquote4, #recent-testimonials .inner{font-family: 'TitilliumText22LRegular';}
+
+/*-------TITLES--------*/
+
+.featured-article-title { color: #aeaeae; padding-top: 40px; padding-right: 40px; padding-left: 20px; }
+.featured-article-title h1 {font-size: 21px!important;letter-spacing: .08em;}
+h1{font-family: 'Lato', sans-serif !important;font-size: 25px!important;}
+h2{font-family: 'Lato', sans-serif !important;}
+
+.ring-title {font-family: 'TitilliumText22LRegular', sans-serif !important;font-size: .88em;margin-bottom: 40px; margin-top: 10px;padding-top: 5px; border-top: 1px solid #ccc; -moz-box-shadow: inset 0px 7px 7px -7px #dedede;-webkit-box-shadow: inset 0px 7px 7px -7px #dedede; box-shadow: inset 0px 7px 7px -7px #dedede;}
+.ring-title a {color: #999;}
+.ring-title a:hover {color: #000;}
+
+/*--------MENUS--------*/
+
+ul.main-menu li a {font-size: 13.5px!important}
+.user-menu-wrapper {font-family: 'ff-meta-web-pro', sans-serif !important;}
+.user-menu-wrapper a {font-family: 'ff-meta-web-pro', sans-serif !important;}
+
+/*----------LINKS--------*/
+
+.landing-page-links-wrapper {font-family: 'Lato', sans-serif !important;}
+.landing-page-links-wrapper a {font-family: 'Lato', sans-serif !important;}
+strong {font-family: 'TitilliumText22LBold'; font-weight:400;}
+body {font-size: .95em;line-height: 1.5em;}
+
+
+/*----------BREADCRUMB--------*/
+
+.breadcrumb {font-size: .8em;}
+
+/*----------PRODUCT PAGES--------*/
+
+.product-detail-page-prices {font-size: .9em!important;}
+.teaser-quote {font-size: .95em; font-family: 'TitilliumText22LRegular', sans-serif;}
+.product-description-field {font-size: .95em; font-family: 'TitilliumText22LRegular', sans-serif;}
+.product-action-link, .product-action-link-rating {font-size: .9em; font-family: 'TitilliumText22LRegular', sans-serif;}
+.how-to-header h2 {font-size: 1em; font-weight: 800;letter-spacing: .1em!important;}
+.how-to-links a {
+	font-family: 'TitilliumText22LRegular', sans-serif;
+	font-size: .8em;
+	text-transform: capitalize;
+	letter-spacing: .07em;
+	color: #656364
+	white-space: nowrap;
+}
+
+/*----------SUBHEAD-------*/
+
+.site-slogan {font-size: 1em;color: #363636!important; font-family: "ff-meta-serif-web-pro",serif!important; font-weight: 400; font-style: italic; letter-spacing: .05em;}
+
+/*----------USER MENU--------*/
+
+.user-menu-item {font-size: .9em;}
+.user-menu-item-last {font-size: .9em; font-style: italic;}
+
+/*---------FOOTER----------*/
+.footer-block-link{font-size: .9em;}
+#zone-bottom-bar {font-size: .7em;text-transform:uppercase; letter-spacing: .1em;}

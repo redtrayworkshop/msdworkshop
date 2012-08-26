@@ -1,0 +1,340 @@
+<?php
+require_once 'shortcodes.php';
+
+/**
+* Implementation of hook_shortcode_info().
+* Using same formatting as hook_filter_info()
+*/
+function glossy_helper_tags_shortcode_info() {
+	$shortcodes = array();
+	
+	// Contact Information Shortcode
+  $shortcodes['contact_info'] = array(
+    'title' => t('Contact Info'), 
+    'description' => t('Display Contact Information.'), 
+    'process callback' => 'glossy_helper_tags_shortcode_contact_info', 
+    //'settings callback' => '_shortcode_settings_form', TODO
+    //'attributes callback' => "glossy_helper_tags_shortcode_contact_info_attributes", TODO
+    'tips callback' => 'glossy_helper_tags_shortcode_contact_info_tip',
+    'default settings' => array(),
+  );
+
+	// framed image
+  $shortcodes['image_frame'] = array(
+    'title' => t('Framed image'), 
+    'description' => t('Display framed image'), 
+    'process callback' => 'glossy_helper_tags_image_frame', 
+    'tips callback' => 'glossy_helper_tags_image_frame_tips',
+    'default settings' => array(),
+  );
+
+  $shortcodes['divider'] = array(
+    'title' => t('divider'), 
+    'description' => t('divider'), 
+    'process callback' => 'glossy_helper_tags_divider', 
+    'tips callback' => 'glossy_helper_tags_divider_tips',
+    'default settings' => array(),
+  );
+
+  $shortcodes['col'] = array(
+    'title' => t('column'), 
+    'description' => t('different column size shortcodes'), 
+    'process callback' => 'glossy_helper_tags_col', 
+    'tips callback' => 'glossy_helper_tags_col_tips',
+    'default settings' => array(),
+  );
+
+  $shortcodes['dropcap'] = array(
+    'title' => t('dropcap'), 
+    'description' => t('dropcap shortcode'), 
+    'process callback' => 'glossy_helper_tags_dropcap', 
+    'tips callback' => 'glossy_helper_tags_dropcap_tips',
+    'default settings' => array(),
+  ); 
+
+	$shortcodes['teaser'] = array(
+    'title' => t('Teaser'), 
+    'description' => t('creates an emphasized teaser paragraph.'), 
+    'process callback' => 'glossy_helper_tags_teaser', 
+    'tips callback' => 'glossy_helper_tags_teaser_tips',
+    'default settings' => array(),
+  );
+
+	$shortcodes['fancy_code_box'] = array(
+    'title' => t('Fancy Code Box'), 
+    'description' => t('creates a fancy CODE Box'), 
+    'process callback' => 'glossy_helper_tags_fancy_code_box', 
+    'tips callback' => 'glossy_helper_tags_fancy_code_box_tips',
+    'default settings' => array(),
+  );
+
+	$shortcodes['fancy_pre_box'] = array(
+    'title' => t('Fancy Pre Box'), 
+    'description' => t('creates a fancy PRE Box'), 
+    'process callback' => 'glossy_helper_tags_fancy_pre_box', 
+    'tips callback' => 'glossy_helper_tags_fancy_pre_box_tips',
+    'default settings' => array(),
+  );
+
+	$shortcodes['fancy_link'] = array(
+    'title' => t('Fancy Link'), 
+    'description' => t('creates a fancy link in sort of download, email and ... link'), 
+    'process callback' => 'glossy_helper_tags_fancy_link', 
+    'tips callback' => 'glossy_helper_tags_fancy_link_tips',
+    'default settings' => array(),
+  );
+
+	$shortcodes['fancy_button'] = array(
+    'title' => t('Fancy Button'), 
+    'description' => t('creates a fancy button that links to somewhere.'), 
+    'process callback' => 'glossy_helper_tags_fancy_button', 
+    'tips callback' => 'glossy_helper_tags_fancy_button_tips',
+    'default settings' => array(),
+  );
+
+	$shortcodes['fancy_header'] = array(
+    'title' => t('Fancy Header'), 
+    'description' => t('creates a fancy header'), 
+    'process callback' => 'glossy_helper_tags_fancy_header', 
+    'tips callback' => 'glossy_helper_tags_fancy_header_tips',
+    'default settings' => array(),
+  );
+
+	$shortcodes['pullquote'] = array(
+    'title' => t('pullquote'), 
+    'description' => t('creates a alignable aligned pullquote'), 
+    'process callback' => 'glossy_helper_tags_pullquote', 
+    'tips callback' => 'glossy_helper_tags_pullquote_tips',
+    'default settings' => array(),
+  );
+
+	$shortcodes['blockquote'] = array(
+    'title' => t('blockquote'), 
+    'description' => t('creates a fancy blockquote'), 
+    'process callback' => 'glossy_helper_tags_blockquote', 
+    'tips callback' => 'glossy_helper_tags_blockquote_tips',
+    'default settings' => array(),
+  );	
+	
+	$shortcodes['highlight'] = array(
+    'title' => t('highlight'), 
+    'description' => t('highlight an inline text'), 
+    'process callback' => 'glossy_helper_tags_highlight', 
+    'tips callback' => 'glossy_helper_tags_highlight_tips',
+    'default settings' => array(),
+  );
+
+	$shortcodes['table'] = array(
+    'title' => t('table'), 
+    'description' => t('Fancy table styles'), 
+    'process callback' => 'glossy_helper_tags_table', 
+    'tips callback' => 'glossy_helper_tags_table_tips',
+    'default settings' => array(),
+  );
+
+	$shortcodes['titled_box'] = array(
+    'title' => t('titled box'), 
+    'description' => t('creates a titled box supporting different colors'), 
+    'process callback' => 'glossy_helper_tags_titled_box', 
+    'tips callback' => 'glossy_helper_tags_titled_box_tips',
+    'default settings' => array(),
+  );
+
+	$shortcodes['colored_box'] = array(
+    'title' => t('colored box'), 
+    'description' => t('creates a colored box supporting different colors'), 
+    'process callback' => 'glossy_helper_tags_colored_box', 
+    'tips callback' => 'glossy_helper_tags_colored_box_tips',
+    'default settings' => array(),
+  );
+
+	$shortcodes['sign_box'] = array(
+    'title' => t('sign boxes'), 
+    'description' => t('creates a sign box including download, info, note and warning signs'), 
+    'process callback' => 'glossy_helper_tags_sign_box', 
+    'tips callback' => 'glossy_helper_tags_sign_box_tips',
+    'default settings' => array(),
+  );
+
+	$shortcodes['fancy_box'] = array(
+    'title' => t('fancy box'), 
+    'description' => t('creates a fancy box that can contain title'), 
+    'process callback' => 'glossy_helper_tags_fancy_box', 
+    'tips callback' => 'glossy_helper_tags_fancy_box_tips',
+    'default settings' => array(),
+  );	
+	
+	$shortcodes['toggle'] = array(
+    'title' => t('toggle content'), 
+    'description' => t('JQuery toggle content'), 
+    'process callback' => 'glossy_helper_tags_toggle', 
+    'tips callback' => 'glossy_helper_tags_toggle_tips',
+    'default settings' => array(),
+  );
+
+	$shortcodes['youtube'] = array(
+    'title' => t('Embed youtube video'), 
+    'description' => t('Embed YouTube video content'), 
+    'process callback' => 'glossy_helper_tags_youtube', 
+    'tips callback' => 'glossy_helper_tags_youtube_tips',
+    'default settings' => array(),
+  );
+
+	$shortcodes['vimeo'] = array(
+    'title' => t('Embed vimeo video'), 
+    'description' => t('Embed vimeo video content'), 
+    'process callback' => 'glossy_helper_tags_vimeo', 
+    'tips callback' => 'glossy_helper_tags_vimeo_tips',
+    'default settings' => array(),
+  );
+
+	$shortcodes['recent_projects'] = array(
+    'title' => t('Recent projects'), 
+    'description' => t('Embed recent projects list'), 
+    'process callback' => 'glossy_helper_tags_recent_projects', 
+    'tips callback' => 'glossy_helper_tags_recent_projects_tips',
+    'default settings' => array(),
+  );
+
+	$shortcodes['recent_blog'] = array(
+    'title' => t('Recent blog posts'), 
+    'description' => t('Embed recent blog posts list'), 
+    'process callback' => 'glossy_helper_tags_recent_blog', 
+    'tips callback' => 'glossy_helper_tags_recent_blog_tips',
+    'default settings' => array(),
+  );
+
+	$shortcodes['fancy_list'] = array(
+    'title' => t('Fancy list'), 
+    'description' => t('creates fancy list styles.'), 
+    'process callback' => 'glossy_helper_tags_fancy_list', 
+    'tips callback' => 'glossy_helper_tags_fancy_list_tips',
+    'default settings' => array(),
+  );
+
+	$shortcodes['list_item'] = array(
+    'title' => t('List items'), 
+    'description' => t('converts inner contents to a list item.'), 
+    'process callback' => 'glossy_helper_tags_list_item', 
+    'tips callback' => 'glossy_helper_tags_list_item_tips',
+    'default settings' => array(),
+  );
+
+  return $shortcodes;
+}
+
+/**
+* Implementation of hook_theme().
+*/
+function glossy_helper_tags_theme() {
+  return array(
+    'shortcode_contact_info' => array(
+      'variables' => array('text' => '', 'class' => 'contact_info', 'name' => '', 'address' => '', 'city' => '', 'state' => '', 'zip' => '', 'phone' => '', 'email' => ''),
+    ),
+  );
+}
+
+/**
+ *
+ */
+function glossy_helper_tags_remove_autop( $text ) { 
+	$text = do_shortcode( shortcode_unautop( $text ) ); 
+	$text = preg_replace('#^<\/p>|^<br \/>|<p>$#', '', $text);
+	return $text;
+}
+
+
+/**
+ * Search content for shortcodes and filter shortcodes through their hooks.
+ *
+ * If there are no shortcode tags defined, then the content will be returned
+ * without any filtering. This might cause issues when plugins are disabled but
+ * the shortcode will still show up in the post or content.
+ *
+ * @since 2.5
+ * @uses $shortcode_tags
+ * @uses get_shortcode_regex() Gets the search pattern for searching shortcodes.
+ *
+ * @param string $content Content to search for shortcodes
+ * @return string Content with shortcodes filtered out.
+ */
+function do_shortcode($content) {
+	$shortcode_tags = shortcode_list_all();
+
+	if (empty($shortcode_tags) || !is_array($shortcode_tags))
+		return $content;
+
+	$pattern = get_shortcode_regex();
+	return preg_replace_callback('/'.$pattern.'/s', '_shortcode_process_tag', $content);
+}
+
+/**
+ * Don't auto-p wrap shortcodes that stand alone
+ *
+ * Ensures that shortcodes are not wrapped in <<p>>...<</p>>.
+ *
+ * @since 2.9.0
+ *
+ * @param string $pee The content.
+ * @return string The filtered content.
+ */
+function shortcode_unautop($pee) {
+	$shortcode_tags = shortcode_list_all();
+	if ( !empty($shortcode_tags) && is_array($shortcode_tags) ) {
+		$tagnames = array_keys($shortcode_tags);
+		$tagregexp = join( '|', array_map('preg_quote', $tagnames) );
+		$pee = preg_replace('/<p>\\s*?(\\[(' . $tagregexp . ')\\b.*?\\/?\\](?:.+?\\[\\/\\2\\])?)\\s*<\\/p>/s', '$1', $pee);
+	}
+
+	return $pee;
+}
+
+/**
+ * Retrieve the shortcode regular expression for searching.
+ *
+ * The regular expression combines the shortcode tags in the regular expression
+ * in a regex class.
+ *
+ * The regular expresion contains 6 different sub matches to help with parsing.
+ *
+ * 1/6 - An extra [ or ] to allow for escaping shortcodes with double [[]]
+ * 2 - The shortcode name
+ * 3 - The shortcode argument list
+ * 4 - The self closing /
+ * 5 - The content of a shortcode when it wraps some content.
+ *
+ * @since 2.5
+ * @uses $shortcode_tags
+ *
+ * @return string The shortcode search regular expression
+ */
+function get_shortcode_regex() {
+	$shortcode_tags = shortcode_list_all();
+	$tagnames = array_keys($shortcode_tags);
+	$tagregexp = join( '|', array_map('preg_quote', $tagnames) );
+
+	// WARNING! Do not change this regex without changing do_shortcode_tag() and strip_shortcodes()
+	return '(.?)\[('.$tagregexp.')\b(.*?)(?:(\/))?\](?:(.+?)\[\/\2\])?(.?)';
+}
+
+/**
+ *
+ */
+function gen_unique_id($len=8) {
+
+  $hex = md5("your_random_salt_here_31415" . uniqid("", true));
+
+  $pack = pack('H*', $hex);
+
+  $uid = base64_encode($pack);        // max 22 chars
+
+  $uid = preg_replace("[^A-Za-z0-9]", "", $uid);    // mixed case
+
+	$len = max(4, min(128, $len));
+	// prevent silliness, can remove
+
+  while (strlen($uid)<$len)
+      $uid = $uid . gen_uuid(22);     // append until length achieved
+
+  return substr($uid, 0, $len);
+}

@@ -1,0 +1,374 @@
+/* TOC 
+01. CONTACT INFO
+02. COLOR VARIATION CLASSES
+03. FANCY BUTTONS & LINKS
+04. IMAGE STYLING
+05. COLUMNS
+06. FANCY TYPOGRAPHY
+07. TEASER
+08. jQuery TOGGLES
+09. FANCY BOXES
+*/
+
+/*================================================================================================*/
+/* 01. CONTACT INFO
+/*================================================================================================*/
+.contact_widget_name,
+.contact_widget_address,
+.contact_widget_city,
+.contact_widget_phone,
+.contact_widget_email{padding-left:22px; line-height: 16px;}
+body div .contact_widget_name {background-position:-649px -348px;}
+body div .contact_widget_city {background: none;}
+body div .contact_widget_phone {background-position:-350px -647px}
+body div .contact_widget_email {text-decoration:underline;}
+
+/*================================================================================================*/
+/* 02. COLOR VARIATION CLASSES
+/*================================================================================================*/
+
+/* Backgrounds & Borders 
+-------------------------------------------------------------- */
+.red{background-color:#700 !important;border-color:#700 !important;}
+.orange{background-color:#e98813 !important;border-color:#e98813 !important;}
+.yellow{background-color:#f7c808 !important;border-color:#f7c808 !important;}
+.green{background-color:#74941f !important;border-color:#74941f !important;}
+.olive{background-color:#3a491a !important;border-color:#3a491a !important;}
+.teal{background-color:#089 !important;border-color:#089 !important;}
+.blue{background-color:#00437f !important;border-color:#00437f !important;}
+.deepblue{background-color:#092334 !important;border-color:#092334 !important;}
+.purple{background-color:#4b2c5a !important;border-color:#4b2c5a !important;}
+.hotpink{background-color:#bc006e !important;border-color:#bc006e !important;}
+.slategrey{background-color:#3b424a !important;border-color:#3b424a !important;}
+.mauve{background-color:#625b56 !important;border-color:#625b56 !important;}
+.pearl{background-color:#ab998f !important;border-color:#ab998f !important;}
+.steelblue{background-color:#788794 !important;border-color:#788794 !important;}
+.mossgreen{background-color:#717a75 !important;border-color:#717a75 !important;}
+.wheat{background-color:#79745d !important;border-color:#79745d !important;}
+.coffee{background-color:#372e25 !important;border-color:#372e25 !important;}
+.copper{background-color:#6b3c02 !important;border-color:#6b3c02 !important;}
+.silver{background-color:#ddd !important;border-color:#d0d0d0 !important;color:#444!important;}
+.black{background-color:#111 !important;border-color:#111 !important;}
+.white{background-color:#fff !important;border-color:#eee !important;color:#aaa!important;}
+.colored_box.white *, 
+.titled_box_title.white *{color:#aaa;}
+.titled_box_title.white, .fancy_box_title{background:url(../img/th.png) repeat-x 0 bottom #F3F3F3;}
+
+/* Icon Variations 
+-------------------------------------------------------------- */
+.black_sprite{background-image:url(../img/shortcodes/sprites/custom_sprite_2e2e2e.png) !important;}
+.red_sprite{background-image:url(../img/shortcodes/sprites/custom_sprite_770000.png) !important;}
+.orange_sprite{background-image:url(../img/shortcodes/sprites/custom_sprite_e98813.png) !important;}
+.yellow_sprite{background-image:url(../img/shortcodes/sprites/custom_sprite_f7c808.png) !important;}
+.green_sprite{background-image:url(../img/shortcodes/sprites/custom_sprite_74941f.png) !important;}
+.olive_sprite{background-image:url(../img/shortcodes/sprites/custom_sprite_3a491a.png) !important;}
+.teal_sprite{background-image:url(../img/shortcodes/sprites/custom_sprite_008899.png) !important;}
+.blue_sprite{background-image:url(../img/shortcodes/sprites/custom_sprite_00437f.png) !important;}
+.deepblue_sprite{background-image:url(../img/shortcodes/sprites/custom_sprite_092334.png) !important;}
+.purple_sprite{background-image:url(../img/shortcodes/sprites/custom_sprite_4b2c5a.png) !important;}
+.hotpink_sprite{background-image:url(../img/shortcodes/sprites/custom_sprite_bc006e.png) !important;}
+.slategrey_sprite{background-image:url(../img/shortcodes/sprites/custom_sprite_3b424a.png) !important;}
+.mauve_sprite{background-image:url(../img/shortcodes/sprites/custom_sprite_625b56.png) !important;}
+.pearl_sprite{background-image:url(../img/shortcodes/sprites/custom_sprite_ab998f.png) !important;}
+.steelblue_sprite{background-image:url(../img/shortcodes/sprites/custom_sprite_788794.png) !important;}
+.mossgreen_sprite{background-image:url(../img/shortcodes/sprites/custom_sprite_717a75.png) !important;}
+.wheat_sprite{background-image:url(../img/shortcodes/sprites/custom_sprite_79745d.png) !important;}
+.coffee_sprite{background-image:url(../img/shortcodes/sprites/custom_sprite_372e25.png) !important;}
+.copper_sprite{background-image:url(../img/shortcodes/sprites/custom_sprite_6b3c02.png) !important;}
+.silver_sprite{background-image:url(../img/shortcodes/sprites/custom_sprite_dddddd.png) !important;}
+.deep_sea_green_sprite{background-image:url(../img/shortcodes/sprites/custom_sprite_dddddd.png) !important;}
+
+/* Text Variations 
+-------------------------------------------------------------- */
+.black_text,.black_sprite a{color:#111 !important;}
+.red_text,.red_sprite a{color:#700 !important;}
+.orange_text,.orange_sprite a{color:#e98813 !important;}
+.yellow_text,.yellow_sprite a{color:#f7c808 !important;}
+.green_text,.green_sprite a{color:#74941f !important;}
+.olive_text,.olive_sprite a{color:#3a491a !important;}
+.teal_text,.teal_sprite a{color:#089 !important;}
+.blue_text,.blue_sprite a{color:#00437f !important;}
+.deepblue_text,.deepblue_sprite a{color:#092334 !important;}
+.purple_text,.purple_sprite a{color:#4b2c5a !important;}
+.hotpink_text,.hotpink_sprite a{color:#bc006e !important;}
+.slategrey_text,.slategrey_sprite a{color:#3b424a !important;}
+.mauve_text,.mauve_sprite a{color:#625b56 !important;}
+.pearl_text,.pearl_sprite a{color:#ab998f !important;}
+.steelblue_text,.steelblue_sprite a{color:#788794 !important;}
+.mossgreen_text,.mossgreen_sprite a{color:#717a75 !important;}
+.wheat_text,.wheat_sprite a{color:#79745d !important;}
+.coffee_text,.coffee_sprite a{color:#372e25 !important;}
+.copper_text,.copper_sprite a{color:#6b3c02 !important;}
+.silver_text,.silver_sprite a{color:#ddd !important;}
+
+
+/*================================================================================================*/
+/* 03. FANCY BUTTONS & LINKS
+/*================================================================================================*/
+
+/* Fancy Buttons 
+-------------------------------------------------------------- */
+.button_link:hover,.fancy_button:hover{text-decoration:none!important;cursor:pointer;color:#fff;}
+.fancy_button::-moz-focus-inner{border:0;padding:0;}
+.large_button,.call_to_action{padding:0.1em 1.1em !important}
+
+/* Fancy Links 
+-------------------------------------------------------------- */
+.fancy_link 
+{
+	padding-left:22px;
+	margin-right:2em;
+	background-position:-192px -791px;
+	display:inline-block;
+}
+
+.fancy_link:hover{text-decoration:underline;}
+.default_link{background-image: none !important}
+.email_link, body div .contact_widget_email{background-position: -899px -96px}
+.twitter_link{background-position: -950px -48px}
+.download_link{background-position: -997px 4px}
+.map_link, body div .contact_widget_address{background-position: -795px -197px}
+.pin_link{background-position: -848px -147px}
+.download_link:hover,.email_link:hover,.download_link:hover{text-decoration:underline!important;}
+
+/*================================================================================================*/
+/* 04. IMAGE STYLING
+/*================================================================================================*/
+figure.alignleft {margin:10px 16px 10px 0;}
+figure.alignright{margin:10px 2px 2px 16px}
+
+/*================================================================================================*/
+/* 05. COLUMNS
+/*================================================================================================*/
+.one_half {width: 48%;}
+.one_third {width: 30.66%;}
+.two_third {width: 65.33%;}
+.one_fourth {width: 22%;}
+.three_fourth {width: 74%;}
+.one_fifth {width: 16.8%;}
+.two_fifth {width: 37.6%;}
+.three_fifth {width: 58.4%;}
+.four_fifth {width: 79.2%}
+.one_sixth {width: 13.33%;}
+.five_sixth {width: 82.67%;
+}
+
+.one_half, .one_third, .two_third, .three_fourth, .one_fourth, .one_fifth, .two_fifth, .three_fifth, .four_fifth, .one_sixth, .five_sixth {
+	margin-right: 4%;
+	margin-bottom: 25px;
+	float: left;
+}
+body div .first_column{margin-left: 0;}
+body div .last_column{margin-right: 0;}
+
+
+/*================================================================================================*/
+/* 06. FANCY TYPOGRAPHY
+/*================================================================================================*/
+
+/* Fancy Lists 
+-------------------------------------------------------------- */
+.fancy_list, .fancy_list ul ,.sitemap_list, .sitemap_list ul, .item-list ul, ul.fancy-list{padding-left:0;}
+.fancy_list li,.sitemap_list li, .item-list li, .fancy-list li{padding-left:22px; list-style:none; margin:1em 0;background-position: -192px -791px;}
+.fancy_list .comment_list, .fancy-list.comment-list li{background-position: -349px -646px}
+.fancy_list .bullet_list, .fancy-list.bullet-list li{background-position: -192px -791px}
+.fancy_list .check_list, .fancy-list.check-list li{background-position: -296px -696px}
+.fancy_list .minus_list, .fancy-list.minus-list li{background-position: -497px -491px}
+.fancy_list .plus_list, .fancy-list.plus-list li{background-position: -447px -546px}
+.fancy_list .tag_list, .fancy-list.tag-list li{background-position: -747px -247px}
+.fancy_list .star_list, .fancy-list.star-list li{background-position: -696px -296px}
+.fancy_list .arrow_list, .fancy_list.arrow-list li{background-position: -44px -944px}
+.fancy_list .circle_arrow, .fancy-list.circle-arrow li{background-position: -246px -746px}
+.fancy_list .triangle_arrow, .fancy-list.triangle-arrow li{background-position: -92px -894px}
+.sitemap_list .children{padding-left:0;}
+
+/* Dropcaps 
+-------------------------------------------------------------- */
+.dropcap,.dropcap3,.dropcap4{text-align:center;float:left;color:#fff;}
+.dropcap 
+{
+	background-position:0 -499px;
+	margin:0 10px -5px 0; 
+	height:44px;
+	line-height:40px;
+	width:40px;
+}
+.dropcap2{display:block;float:left;margin:0 8px -5px 0;}
+.dropcap3{background-position:2px -600px; margin-right:5px;height:40px;width:40px;}
+body .dropcap4{
+	margin:0 10px 0 0;
+	padding: 0;
+	height:35px;
+	width:35px;
+	-moz-box-shadow:0 1px 1px rgba(0,0,0,0.3),1px 0 0 rgba(255,255,255,0.1) inset,-1px 0 0 rgba(255,255,255,0.1) inset,0 1px 0 rgba(255,255,255,0.3) inset;
+	-webkit-box-shadow:0 1px 1px rgba(0,0,0,0.3),1px 0 0 rgba(255,255,255,0.1) inset,-1px 0 0 rgba(255,255,255,0.1) inset,0 1px 0 rgba(255,255,255,0.3) inset;
+	box-shadow:0 1px 1px rgba(0,0,0,0.3),1px 0 0 rgba(255,255,255,0.1) inset,-1px 0 0 rgba(255,255,255,0.1) inset,0 1px 0 rgba(255,255,255,0.3) inset;
+}
+
+/* Pullquotes 
+-------------------------------------------------------------- */
+.pullquote,.pullquote2,.pullquote3,.pullquote4
+{
+    display: inline-block;
+    float: left;
+    margin-bottom: 1em;
+    margin-right: 2em;
+    margin-top: 1.5em;
+    padding: 12px !important;
+    width: 40%;
+}
+.pullquote{}
+.pullquote2{border-left:3px solid;letter-spacing:0;padding:0 0 0 17px;width:36%;}
+.pullquote3{border-top:4px double #e0e0e0;border-bottom:4px double #e0e0e0;padding:22px 0;}
+.pullquote4{background:url(../img/button_overlay.png) repeat-x 0 0 #111;border:1px solid #111;color:#f8f8f8;padding:19px;font-size:14px;}
+.quotes:before{content:'\201C';margin-right:5px;display:inline;vertical-align:middle;}
+.quotes:after{content:'\201D';margin-left:5px;display:inline;vertical-align:middle;}
+.pullquote.aligncenter,.pullquote2.aligncenter,.pullquote3.aligncenter,.pullquote4.aligncenter{float:none;text-align:left;width:auto;display:block;}
+.pullquote.alignleft,.pullquote.aligncenter{margin-left:2px;}
+.pullquote.alignright,.pullquote.aligncenter{margin-right:2px;}
+.pullquote.alignright{margin-left: 2em;}
+
+/* Blockquotes 
+-------------------------------------------------------------- */
+blockquote{margin:20px 0;padding:5px 5px 5px 45px;background-position:-1000px -1000px; background-repeat: no-repeat}
+blockquote p{margin-bottom:0;}
+cite{color:#aaa;}
+
+/* Fancy Tables 
+-------------------------------------------------------------- */
+.minimal_table,.fancy_table{border-collapse:separate;margin-bottom:20px;border-spacing:0;width:100%;vertical-align:middle;}
+.minimal_table th{padding:10px 20px;vertical-align:middle;text-align:left;}
+.minimal_table table {border: none;} .minimal_table td{padding:10px 20px;border: none;}
+.fancy_table{width:99%;border:1px solid #fff;}
+.fancy_table td{background: transparent; padding:10px 20px;border: none; border-top:1px solid #eee;text-align:center;border-bottom:1px solid #e9e9e9;}
+.fancy_table tr:hover{background:#f3f3f3 url(../img/th.png) 0 0 repeat-x;}
+.fancy_table th:first-child,.fancy_table td:first-child{text-align:left;padding-left:30px;}
+
+/* Highlight Styles 
+-------------------------------------------------------------- */
+.highlight{display: inline-block; padding:0.1em 0.4em;}
+.highlight2 {border-bottom: 1px dashed;font-style: italic; padding: 1px;}
+
+/* Fancy Headers 
+-------------------------------------------------------------- */
+.fancy_header{margin-bottom:20px;padding-bottom:0;background-image:none;}
+.fancy_header span{color:#fff;font-size:11px;letter-spacing:2px;padding:4px 12px;text-transform:uppercase;}
+.fancy_header3{background:url(../img/shortcodes/stripes.png) repeat 0 0;clear:both;line-height:12px;margin:14px 0;padding-left:0;}
+.fancy_header3 span{background-color:#f9f9f9;color:#888;font-size:12px;letter-spacing:1px;padding-right:5px;text-transform:uppercase;}
+.fancy_header2{margin-bottom:30px;display:block;position:relative;text-align:center;}
+.fancy_header2 span{text-shadow:0 1px 1px #fff;border:4px solid #eee;border:4px solid rgba(0,0,0,0.02);color:#c5c5c5;color:rgba(0,0,0,0.15);background:url(../img/shortcodes/fancy_header2.jpg) repeat 0 center;font-family:georgia;font-size:20px;line-height:30px;font-style:italic;display:block;padding:70px 20px;overflow:hidden;}
+.fancy_header2 span:first-line{font-size:60px;line-height:100%;}
+.fancy_header2 span small{font-size:90%;}
+.fancy_header2 span br{margin-bottom:10px;}
+
+/* Fancy Dividers 
+-------------------------------------------------------------- */
+.divider{background:url(../img/shortcodes/inset_line.png) left center no-repeat;clear:both;display:block;height:1px;padding:3em 0; margin: 0; text-align:right;width:100%;}
+.top{background-position:right center;}
+.clearboth{clear:both;}
+.top a{
+	color: #CCCCCC;
+	display: block;
+	font-size: 0.8em;
+	line-height: 0.9em;
+	margin-top: -0.5em;
+	text-decoration: none;
+}
+.top a:hover{text-decoration:none;}
+.pad{height:2em; margin: 0; padding: 0;}
+hr{margin-top:20px;margin-bottom:19px;background:#eee;color:#eee;border:none;height:1px;}
+
+/*================================================================================================*/
+/* 07. TEASER
+/*================================================================================================*/
+.teaser_normal, .teaser_large{margin-bottom: 3em;}
+.teaser{color:#aaa;}
+.teaser_large{color:#b4b4b4;}
+
+/*================================================================================================*/
+/* 08. jQuery TOGGLES
+/*================================================================================================*/
+
+/* default Toggles 
+-------------------------------------------------------------- */
+#page .toggle
+{
+	background-position:-550px -442px;
+	padding: 7px 30px;
+	cursor: pointer;
+  margin: 0;
+}
+.active{background-position:-400px -593px}
+#page .toggle_content{clear:both;margin:0 0 20px 30px;overflow:hidden;}
+
+/* Framed Toggles 
+-------------------------------------------------------------- */
+#page .toggle_framed{margin: 15px 2px;padding: 15px 20px;}
+#page .toggle_framed .toggle{background-position:-450px -538px}
+#page .toggle_framed .active{background-position:-500px -483px;}
+#page .toggle_framed .toggle_content{border:0;padding:0px;}
+#page .toggle_framed .toggle_content .block{padding:0px;}
+
+/*================================================================================================*/
+/* 09. FANCY BOXES
+/*================================================================================================*/
+.colored_box_content,.fancy_box_content,.titled_box_content{position:relative;overflow:hidden;clear:both;padding:20px;}
+.colored_box p:last-child,.fancy_box_content p:last-child,.titled_box_content p:last-child{margin-bottom:10px;}
+
+/* Fancy Boxes 
+-------------------------------------------------------------- */
+.fancy_box{border:1px solid #fff;margin:2px 2px 20px;color:#888;background-color:#f8f8f8;}
+.fancy_box_title{border-bottom:1px solid #fff;}
+.colored_box{background-image:url(../img/button_overlay.png); background-repeat: repeat-x; border:1px solid transparent}
+.colored_box_title{background:url(../img/shortcodes/colored_box_title.png) repeat-x bottom right;}
+.colored_box * {color: #fff}
+.colored_box, .titled_box{margin-bottom: 2em;}
+ 
+/** titled box + fancy box **/
+body div .titled_box_title, 
+body div .colored_box_title, 
+body div .fancy_box_title
+{
+	padding:0 1.9em; 
+	margin: 0;
+	display: block;
+	border-radius:5px 5px 0 0;
+	-moz-border-radius-bottomleft:0;
+	-moz-border-radius-bottomright:0;
+	-webkit-border-bottom-left-radius:0;
+	-webkit-border-bottom-right-radius:0;
+}
+
+body div .titled_box_content{
+	padding:20px;
+	border:1px solid #e5e5e5;
+	margin:0;
+	-webkit-box-shadow:0;
+	-moz-box-shadow:0;
+	box-shadow: 0;
+	border-radius:0 0 5px 5px;
+	-moz-border-radius-bottomleft:5px;
+	-moz-border-radius-bottomright:5px;
+	-webkit-border-bottom-left-radius:5px;
+	-webkit-border-bottom-right-radius:5px;
+}
+
+/* Fancy Code & Pre Boxes 
+-------------------------------------------------------------- */
+code,pre{font-family:"Courier New","Consolas",Courier,monospace;white-space:pre;overflow:auto;font-size:11px;margin-bottom:20px;}
+.fancy_code_box, .fancy_pre_box, .geshifilter code{border:1px solid #eee;margin-bottom:20px;line-height:20px;background:#fff;padding:0 20px;display:block;overflow:auto;}
+.fancy_code_box, .geshifilter code{background:url(../img/shortcodes/code.gif) repeat 0 0;border-top:transparent;}
+.fancy_code_box p,.fancy_pre_box p, .geshifilter p{margin: 0 !important; display: inline}
+
+/* Sign Boxes 
+-------------------------------------------------------------- */
+.messages{padding:20px 15px 20px 55px;margin-bottom:20px;}
+.boxed a{text-decoration:underline !important;}
+.boxed.info{background:#bfe4f9 url(../img/shortcodes/icons/info.png) no-repeat 10px 15px;border:1px solid #68a2cf;}
+.boxed.note, .messages.status{background:#fdebae url(../img/shortcodes/icons/notebook.png) no-repeat 10px 15px;border:1px solid #e6c555;}
+.boxed.warning, .messages.error{background:#ffcccc url(../img/shortcodes/icons/warning.png) no-repeat 10px 15px;border:1px solid #ff9999;}
+.boxed.download{background:#dee3ab url(../img/shortcodes/icons/download.png) no-repeat 10px 15px;border:1px solid #a3c159;}
+.boxed.info, .boxed.info a{color:#2e6093;}
+.boxed.note, .boxed.note a, .messages.status, .messages.status a{color:#9e660d;}
+.boxed.warning, .boxed.warning a, .messages.error, .messages.error a{color:#c31b00;}
+.boxed.download, .boxed.download a{color:#5e6f33;}

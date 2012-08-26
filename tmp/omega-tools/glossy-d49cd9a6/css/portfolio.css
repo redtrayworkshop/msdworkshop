@@ -1,0 +1,80 @@
+/**
+* Default Portfolio Styling - Isotope Disabled
+*/
+.view-portfolio .element-outer 
+{
+	float: left;
+	width: 23.40909090909091%;
+	min-height: 250px;
+	margin: 9px;
+}
+
+.view-portfolio .element-outer.omega
+{
+	margin-right: 0;
+}
+
+.view-portfolio .element-outer.alpha
+{
+	margin-left: 0;
+}
+
+body div .view-portfolio .element img
+{
+	max-width: 93.20388349514563%;
+}
+
+body div .view-portfolio .element h3
+{
+	margin-top: .7em;
+}
+
+
+@media only screen and (min-width: 998px) and (max-width: 1238px) {
+	.view-portfolio .element-outer 
+	{
+		width: 23.07142857142857%;
+	}
+}
+
+@media only screen and (min-width: 343px) and (max-width: 997px) {
+	.view-portfolio .element-outer 
+	{
+		width: 46.67149059334298%;
+		min-height: 280px;
+	}
+	
+	.view-portfolio .element-outer.odd
+	{
+		margin: 0;
+		margin-right: 9px;
+	}
+
+	.view-portfolio .element-outer.even
+	{
+		margin: 0;
+		margin-left: 9px;
+	}
+}
+
+@media only screen and (max-width: 342px) {
+	.view-portfolio .element-outer 
+	{
+		width: 100%;
+		min-height: 280px;
+	}
+	
+	body div .view-portfolio .element img
+	{
+		max-width: 95.20388349514563%;
+	}
+
+	.view-portfolio .element-outer.odd,
+	.view-portfolio .element-outer.even
+	{
+		margin: 0;
+	}
+
+}
+
+

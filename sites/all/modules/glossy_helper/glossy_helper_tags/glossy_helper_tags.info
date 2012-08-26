@@ -1,0 +1,12 @@
+name = Glossy Premium Theme Shortcodes                                                                         
+description = Provides Most used shortcode tags like highlight, dropcap, etc.                                                       
+package = "glossy"                                                                                          
+core = 7.x
+dependencies[] = filter
+dependencies[] = shortcode
+dependencies[] = glossy_helper
+version = "7.x-2.x-dev"
+core = "7.x"
+project = "shortcode"
+datestamp = "1322138161"
+

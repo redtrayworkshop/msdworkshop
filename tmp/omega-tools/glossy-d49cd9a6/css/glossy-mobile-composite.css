@@ -1,0 +1,233 @@
+/* This file will hold styles that are composite */
+
+/** 1248px < W **/
+@media only screen and (min-width: 1248px){
+	#quicktabs-node_bottom_tabs img{max-width: 92.58620689655172% !important;}
+}
+
+@media only screen and (min-width: 1101px) and (max-width: 1248px) {
+	/** Quick tabs  **/
+	body div .quicktabs-style-nostyle .content li,
+	body div .view-display-id-row_format .views-row
+	{
+		width: 23.35294117647059% !important;
+		max-width: 23.35294117647059% !important;
+	}
+}
+
+@media only screen and (min-width: 997px) and (max-width: 1100px) {
+	/** Quick tabs  **/
+	body div .quicktabs-style-nostyle .content li,
+	body div .view-display-id-row_format .views-row
+	{
+		width: 22.79294117647059% !important;
+		max-width: 22.79294117647059% !important;
+	}
+	body div .quicktabs-style-nostyle img,
+	body div .view-display-id-row_format img{max-width:	91.59620689655172%}
+}
+
+@media only screen and (min-width: 740px) and (max-width: 996px) {
+	/** Quick tabs  **/
+	body div .quicktabs-style-nostyle .content li,
+	body div .view-display-id-row_format .views-row
+	{
+		width: 47.95294117647059%;
+		max-width: 47.95294117647059%;
+		margin:0;
+		margin-bottom: 3em;
+	}
+
+	body div .quicktabs-style-nostyle .content li.views-row-odd,
+	body div .view-display-id-row_format .views-row-odd
+	{
+		margin-right: 10px;
+	}
+
+	body div .quicktabs-style-nostyle .content li.views-row-even,
+	body div .view-display-id-row_format .views-row-even
+	{
+		margin-left: 10px;
+	}
+	
+	#quicktabs-node_bottom_tabs img{max-width: 95.58620689655172% !important;}
+	
+	/** Slider Item Shadow **/
+	body .view-display-id-ff_orbit_slider .view-content,
+	body .view-display-id-ff_nivo_slider .view-content
+
+	{
+		background-image: url(../img/shadow-900.png);
+	}
+	.blocky-views .alignleft
+	{
+		float: none !important;
+		clear: both;
+	}	
+	
+	.blocky-views h3
+	{
+		clear: both;
+	}
+	
+	.blocky-views .alignleft .lightbox-processed img
+	{
+		float: left
+	}
+	
+	body div #search-block-form .form-type-searchfield, 
+	body div #search-block-form .form-actions
+	{
+			margin: 0;
+			position: relative;
+			width: 100%;
+	}
+	
+	body div #search-block-form .form-type-searchfield input
+	{
+		border-right-width: 1px;
+		float: none !important;
+	}
+	
+	body div #search-block-form .form-type-searchfield input,
+	body div #search-block-form .form-actions input
+	{
+		float: left;
+		moz-border-radius:5px;
+		-webkit-border-radius:5px;
+		border-radius: 5px;
+	}
+	
+	body div .region-sidebar-first input,
+	body div .region-sidebar-first textarea,
+	body div .region-sidebar-second input,
+	body div .region-sidebar-second textarea
+	{
+		width: 78%;
+	}
+		.one_half, .one_third, .one_fifth, .one_fourth, .one_sixth {width:46% !important; margin-right:4% !important;}
+		.two_third, .three_fourth, .two_fifth, .three_fifth, .four_fifth, .five_sixth {width:100% !important;}
+}
+
+/** 320 < W <739 **/
+@media only screen and (min-width: 320px) and (max-width: 739px) {
+	body
+	{
+		background: #F5F6F6;
+	}
+
+	
+	body div .region-user-first
+	{
+		padding-bottom: 1em;
+	}
+	
+	body div #block-follow-site
+	{
+		float: left;
+	}
+	
+	body div .region-sidebar-first .block
+	{
+		padding-right: 0 !important;
+	}
+	
+	body div .region-sidebar-second .block
+	{
+		padding-left: 0 !important;
+	}
+	
+	body div .region-sidebar-first,
+	body div .region-sidebar-second,
+	body div .region-sidebar-second .block.block-menu li a.active
+	{
+		background: none !important;
+	}
+	
+	body div .alignleft, body div .alignright{margin:0; margin-bottom: 1em; float: none;}
+	
+	body div .blocky-views .alignleft
+	{
+		float: left;
+		margin-right: 10px;
+	}
+	
+	/** Quick tabs Content -- Views **/
+	/* Two Column */
+	body div .quicktabs-style-nostyle .content li, 
+	body div .view-display-id-row_format .views-row
+	{
+		width: 99.35294117647059%;
+		max-width: 99.35294117647059%;
+		margin: 0 0 1.5em;
+	}
+		
+	/** Bordered Image **/
+	body div .node .field-type-image img,
+	body div .author-avatar img,
+	body div .quicktabs-tabpage .views-field-field-image,
+	body div .quicktabs-tabpage .views-field-field-portfolio-image,
+	body div .user-picture img,
+	body div .view-portfolio img,
+	body div .portfolio-images,
+	body div #block-locationmap-image img,
+	body div .blocky-views img,
+	body div .framed, 
+	body div #contact-location-image img
+	{
+		max-width: 95.68620689655172%;
+	}
+	
+	/** Profile Module **/
+	body .profile .user-picture{width: 100%; margin-bottom: 1em;}
+	body .profile .user-picture a{float: none;}
+	body .profile h3, body .profile .user-profile-category, body .profile .field{margin-left: 0;}
+	
+	body .section-footer .region-inner{padding: 0;}
+	body #region-footer-main-first .region-inner{padding:0; }
+	body #region-footer-main-second .region-inner{padding: 0;}
+	
+	body div .region-sidebar-first .block:last-child{background: url("../img/sidebar_divider.png") repeat-x scroll 0 bottom transparent;}
+
+	.orbit-caption *,
+	.nivo-caption
+	{
+		font-size: 1em;
+	}
+	
+}
+
+
+/** (shared)  320px < W <768px **/
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+	body .navigation{float:none;width: 100%;clear:both}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+		/** Slider Item Shadow **/
+		body .view-display-id-ff_orbit_slider .view-content,
+		body .view-display-id-ff_nivo_slider .view-content
+
+		{
+			background-image: url(../img/shadow-600.png);
+			padding-bottom: 1.35em;
+
+		}
+		
+		.one_half, .one_third, .one_fifth, .one_fourth, .one_sixth {width:46% !important; margin-right:4% !important;}
+		.two_third, .three_fourth, .two_fifth, .three_fifth, .four_fifth, .five_sixth {width:100% !important;}
+
+}
+
+/** (shared)  320px < W <768px **/
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+		/** Slider Item Shadow **/
+		body .flexslider .field-content,
+		body .view-display-id-ff_orbit_slider .view-content,
+		body .view-display-id-ff_nivo_slider .view-content
+		{
+			background-image:none;
+			padding:0;
+		}
+		.one_half, .one_third, .two_third, .three_fourth, .one_fourth, .one_fifth, .two_fifth, .three_fifth, .four_fifth, .one_sixth, .five_sixth {width:100% !important;}
+}

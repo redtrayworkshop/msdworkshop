@@ -1,0 +1,77 @@
+<?php
+/**
+ * @file glossy_helper_plugins.module
+ *	module for adding shortcode plugins to wysiwyg editor
+ */
+ 
+/**
+ * Return an array of native editor plugins.
+ *
+ * Only to be used for native (internal) editor plugins.
+ *
+ * @see hook_wysiwyg_include_directory()
+ *
+ * @param $editor
+ *   The internal name of the currently processed editor.
+ * @param $version
+ *   The version of the currently processed editor.
+ *
+ * @return
+ *   An associative array having internal plugin names as keys and an array of
+ *   plugin meta-information as values.
+ */
+function glossy_helper_plugins_wysiwyg_plugin($editor, $version) {
+  switch ($editor) {
+    case 'tinymce':
+			$path = drupal_get_path('module', 'glossy_helper_plugins');
+
+			$plugins['dropletz_shortcode'] = array(
+			'path' => $path . '/plugins/dropletz_shortcode',
+			'filename' => 'editor_plugin.js',
+			'extensions' => array('dropletz_shortcode' => t('Dropletz Shortcodes')),
+	    'buttons' => array('dropletz_shortcode' => t('Dropletz Shortcodes')),
+			'url' => 'http://dropletz.com',
+			'internal' => FALSE,
+			'load' => TRUE,
+			);
+
+			$plugins['dropletz_color'] = array(
+			'path' => $path . '/plugins/dropletz_color',
+			'filename' => 'editor_plugin.js',
+	    'buttons' => array('colorChooser' => t('Dropletz Color Chooser')),
+			'url' => 'http://dropletz.com',
+			'internal' => FALSE,
+			'load' => TRUE,
+			);
+			
+		break;
+	}
+
+  return $plugins;
+}
+
+/**
+ * Register a directory containing Wysiwyg plugins.
+ *
+ * @param $type
+ *   The type of objects being collected: either 'plugins' or 'editors'.
+ * @return
+ *   A sub-directory of the implementing module that contains the corresponding
+ *   plugin files. This directory must only contain integration files for
+ *   Wysiwyg module.
+ */
+function glossy_helper_plugins_wysiwyg_include_directory($type) {
+  switch ($type) {
+    case 'plugins':
+      // You can just return $type, if you place your Wysiwyg plugins into a
+      // sub-directory named 'plugins'.
+      return $type;
+  }
+}
+
+/**
+ * Implements hook_init().
+ */
+function glossy_helper_plugins_init() {
+	drupal_add_css(drupal_get_path('module', 'glossy_helper_plugins') .'/css/tinymce_style.css'); 
+}

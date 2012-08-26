@@ -1,0 +1,323 @@
+/**
+ * @file Typography styles
+ * @group default typography
+ */
+ 
+/*===================================================================================*/
+/*	1. body, common classes, structure etc
+/*===================================================================================*/
+body
+{
+    font: 12px/20px 'Lucida Grande', 'Lucida Sans Unicode',  sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, th,
+.portfolio-images .caption p, 
+.form-submit,
+div.zone-footer input.form-submit,
+.more-link a,
+div.zone-footer .more-link a,
+.quicktabs-style-nostyle .quicktabs-tabs li a, 
+.calendar-links a,
+body ul.tabs li a,
+#iso-filters li a, 
+.column-links ul li a,
+#imageData #caption
+{
+	font-family: 'ff-meta-web-pro','Lucida Sans Unicode','Lucida Grande',sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    text-transform: capitalize;
+	font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+h1 {
+	/*---font-family: 'Lato', sans-serif!important;----not doing anything here*/
+    font-size: 2em!important;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+	line-height: 1.5em;
+}
+
+h2 {
+	/*---font-family: 'Lato', sans-serif!important;----not doing anything here*/
+    font-size: 1.25em ! important;
+    /*font-weight: 600!important;*/
+    text-transform: uppercase;
+    letter-spacing: .07em!important;
+	line-height: 1.3em;
+}
+
+h3 {
+    font-size: 1.5em;
+	line-height: 1em;
+}
+
+h4 {
+    font-size: 1.3em;
+	line-height: 1.3em;
+}
+
+h5
+{
+    font-size: 1.1em;
+	line-height:  1.1em;
+}
+
+h6 {
+    font-size: .9em;
+	line-height:  1em;
+}
+
+th
+{
+	text-transform: uppercase;
+}
+
+figcaption, 
+.block.block-menu li a
+{
+	text-transform: capitalize;
+}
+
+form label,
+ul.tabs li a,
+#iso-options li a,
+.calendar-links li a,
+.quicktabs-style-nostyle .quicktabs-tabs a
+{
+	text-transform: uppercase;
+}
+
+
+input,
+textarea
+{
+	line-height: 1.9em !important;
+}
+
+/*===================================================================================*/
+/*	2. User Zone Styles
+/*===================================================================================*/
+#zone-user *
+{
+    font-size: 11px !important;
+    line-height: 1.3em;
+}
+
+/*	2.1 Follow Links block
+/*===================================================================================*/
+.block-follow-site .block-title
+{
+	font-size:0.98em;
+	line-height: 16px;
+}
+.block-follow-site .block-title, 
+.column-links ul li ul li a 
+{
+	font-family: 'Lucida Grande','Lucida Sans Unicode',sans-serif;
+}
+
+/*===================================================================================*/
+/*	3. header section styles
+/*===================================================================================*/
+
+/*	3.1 Branding Region Styles
+/*===================================================================================*/
+
+
+.site-slogan {} /*---see typography-custom.css----*/
+
+/*===================================================================================*/
+/*	3.2 Navigation Styles
+/*===================================================================================*/
+#header-main-content .navigation li a
+{
+	font: 1.12em 'ff-meta-web-pro','Lucida Sans Unicode','Lucida Grande',sans-serif;
+	text-transform: uppercase;
+}
+
+
+#header-main-content .navigation li a span.description
+{
+	font-size: 0.85em;
+	text-transform: lowercase;
+}
+
+#header-main-content .navigation li li a
+{
+		font-size: 1em;
+		text-transform: capitalize;
+}
+
+#header-main-content .navigation li a span.description, 
+#header-main-content .navigation li li a
+{
+		font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;
+}
+
+/*===================================================================================*/
+/*	4. content section styles
+/*===================================================================================*/
+.node footer,
+.comment footer,
+.view footer,
+.node-links ul, 
+#user-login-form ul,
+.view-comments-recent .views-field-timestamp,
+.block-comment-recent li span,
+.view-recent-blog-posts .created,
+body div .blocky-views .created,
+.form-item .description,
+.search-results .search-info, 
+form label
+{
+ font-size: 0.95em;
+}
+
+.field .field-label
+{
+	font-weight: normal;
+}
+
+.comment .left-column .username
+{
+	font-size: 1.1em;
+	text-transform: capitalize;
+}
+
+/*	4.1 Slideshow Region Styles
+/*===================================================================================*/
+.orbit-caption *,
+.nivo-caption .header,
+.view-display-id-ff_AnythingSlider .caption
+{
+	font-size: 1.2em;
+	font-family:  'TitilliumText22LLight', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+	text-transform: capitalize;
+	color: #fff;
+}
+
+
+
+/*	4.2 content Region Styles
+/*===================================================================================*/
+div.item-list .pager li a,
+.item-list .pager-current span
+{
+	font-size: 0.75em;
+	line-height: 1.8em;
+}
+
+.portfolio-images .caption p
+{
+	font-size: 1.1em
+}
+
+/*	4.3 Services link
+/*======================================================================================*/
+.service-links a
+{
+	line-height: 2.7em;
+}
+
+#block-service-links-service-links .block-title
+{
+	font-size: 1.5em !important;
+	line-height: 32px
+}
+
+/*	4.4 Quick tabs - style x1
+/*===================================================================================*/
+h3.item-title *, 
+.quicktabs-style-nostyle .content h3 a, 
+.view-portfolio h3 a,
+body div .blocky-views h3 a,
+.view-display-id-row_format h3 a
+{
+	font-size: .75em;
+}
+
+/*	4.5 Intro Section
+/*===================================================================================*/
+.intro-message
+{
+		font: 2em/1.8em 'TitilliumText22LLight', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+}
+
+/* 4.6  Node bottom region
+-------------------------------------------------------------- */
+.auhtor-info .follow-title
+{
+	line-height: 1.361em;
+}
+
+/*	X Buttons
+/*===================================================================================*/
+.form-submit,
+.more-link a,
+div.zone-footer input.form-submit,
+div.zone-footer .more-link a,
+.quicktabs-style-nostyle .quicktabs-tabs li.active a,
+.calendar-links.day .calendar-day a,
+.calendar-links.week .calendar-week a,
+.calendar-links.month .calendar-month a,
+.calendar-links.year .calendar-year a,
+#iso-options li.active a,
+body ul.tabs li.active a,
+ul.action-links a,
+.button_link,
+.fancy_button, 
+.titled_box_title
+{
+	line-height: 2.7em; 
+	letter-spacing:1px;
+	font-size: 1em;
+}
+
+.quicktabs-style-nostyle .quicktabs-tabs a, 
+.calendar-links li a,
+#iso-options li a,
+ul.tabs li a,
+ul.tabs li a:hover
+{
+	line-height: 2.5em;
+}
+/*===================================================================================*/
+/*	X Footer
+/*===================================================================================*/
+.block-views-node-bottom-blocks-about-author .block-title
+{
+	font: 1em 'Lucida Sans', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif !important;
+	letter-spacing: .1em;
+	line-height: 2.5em;
+}
+
+/*============================================================================================*/
+/* Shortcodes
+/*============================================================================================*/
+.teaser_normal{font:1.35em/1.65em 'TitilliumText22LMedium', 'Lucida Grande', sans-serif;}
+.teaser_large{line-height:1.6em;font-weight:200; letter-spacing:1px; font:1.8em 'TitilliumText22LBold', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif}
+.large_button,.call_to_action{font-size:1.5em;  text-transform: none !important}
+.dropcap {font-size: 1.6em;}
+.dropcap2{font-size: 2.5em;line-height: 1.5em;}
+.dropcap3, .dropcap4{font-size: 1.45em; line-height:2.2em;}
+.pullquote,.pullquote2,.pullquote3,.pullquote4, #recent-testimonials .inner
+{
+	font-family: "Times New Roman",Georgia,Times,serif;
+	font-size: 1.2em;
+	line-height: 1.5em;
+}
+.pullquote2{font-size:1.3em;line-height:1.5em;}
+.quotes:before, .quotes:after {font-weight:bold; font-size:2.2em;}
+blockquote {font-size: 1.1em;}
+.small_button{font-size:.8em}
+.minimal_table th{font-size:.9em;letter-spacing:1px;font-weight:normal;}
+.colored_box_title,.titled_box_title, .fancy_box_title{text-transform:uppercase;letter-spacing:1px;	line-height: 2.7em;}
+.boxed {font-size:1.1em;letter-spacing:.3px;}
+#page .toggle a, #page .toggle_accordion a{font-weight:normal;letter-spacing:0.4px;text-decoration:none;text-transform:none;}
+#recent-testimonials .views-field-field-testimonial-signature{font-style: italic;}
