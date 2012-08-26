@@ -1,4 +1,0 @@
-msdworkshop
-===========
-
-Mark Schneider Design
