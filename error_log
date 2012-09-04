@@ -11370,3 +11370,4 @@
 [20-Aug-2012 14:11:11] test
 [20-Aug-2012 14:11:11] test
 [20-Aug-2012 14:11:11] test
+[30-Aug-2012 16:10:24] PHP Fatal error:  Wrong parameters for Exception([string $exception [, long $code ]]) in /home/redtrayw/public_html/msdworkshop.net/sites/all/modules/twitter/twitter.lib.php on line 18

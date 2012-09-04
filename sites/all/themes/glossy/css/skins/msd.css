@@ -108,7 +108,10 @@ body div.region .site-slogan
 	margin-top: 33px;
 }
 
-
+#zone-content #region-content,
+#zone-content #region-sidebar-second {
+	margin-top: -13px !important;
+}
 
 /*================================================================================================*/
 /*	Slideshow region
@@ -337,14 +340,15 @@ span.field-content.ring-title {
 .transcript-link {
 	clear: both ! important;
 	}
-
+.node-type-video .embedded-video .player { margin-left: -80px; }
 .video-page-title {  }	
 .node-type-video { width: 100%; }	
 .node-type-video .field-name-field-video-youtube-url { margin-left: auto; margin-right: auto; max-width: 640px; }	
-.field-name-field-video-caption { font-style: italic; margin: 0px 20px 10px 20px; max-width: 640px; margin-right: auto; margin-left: auto; }
+.field-name-field-video-caption { font-style: italic; margin: 0px 5px 10px 5px; max-width: 800px; margin-right: auto; margin-left: auto; }
 .field-name-field-video-description { margin: 5px 29px; }
 .video-transcript-fieldset { background: #eaeaea; margin: 5px 20px; padding: 2px 10px; }
 legend .fieldset-legend { color: red; margin-bottom: 5px; }
+.page-about-mark-schneider-design-jewelry-videos .video-caption { border-bottom: solid 1px #eaeaea; margin-right: 26px; }
 	
 /* -----------blog (jewelry news) CSS------------ */
 .blog-date {
@@ -376,6 +380,7 @@ legend .fieldset-legend { color: red; margin-bottom: 5px; }
 .blog-lower-images {
 	clear: both;
 	}
+.view-jewelry-news-views .views-field-field-news-body { margin-right: 10px; }	
 	
 /*Added by Amanda*/
 .views-field-field-news-body {margin-top: 30px;}
@@ -442,7 +447,8 @@ legend .fieldset-legend { color: red; margin-bottom: 5px; }
 
 .articles-page-region-inside {width: 85%; margin: 0 auto;}
 .articles-page-region-inside .pretty-page-title-wrapper {margin-bottom: 30px!important;}
-
+.page-image-caption { text-align: center; margin-top: -14px; }
+.static-page-body { margin: 0 15px; }
 
 /*------------FEATURED ARTICLES--------------*/
 
@@ -453,27 +459,29 @@ legend .fieldset-legend { color: red; margin-bottom: 5px; }
 .featured-article-teaser-wrapper {}
 
 .featured-article-wrapper { 
-background: rgb(242,243,243); /* Old browsers */
+background: rgb(249,249,249); /* Old browsers */
 /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-background: -moz-radial-gradient(center, ellipse cover,  rgba(242,243,243,1) 0%, rgba(174,174,174,1) 95%); /* FF3.6+ */
-background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(242,243,243,1)), color-stop(95%,rgba(174,174,174,1))); /* Chrome,Safari4+ */
-background: -webkit-radial-gradient(center, ellipse cover,  rgba(242,243,243,1) 0%,rgba(174,174,174,1) 95%); /* Chrome10+,Safari5.1+ */
-background: -o-radial-gradient(center, ellipse cover,  rgba(242,243,243,1) 0%,rgba(174,174,174,1) 95%); /* Opera 12+ */
-background: -ms-radial-gradient(center, ellipse cover,  rgba(242,243,243,1) 0%,rgba(174,174,174,1) 95%); /* IE10+ */
-background: radial-gradient(ellipse at center,  rgba(242,243,243,1) 0%,rgba(174,174,174,1) 95%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f3f3', endColorstr='#aeaeae',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMjYlIiBzdG9wLWNvbG9yPSIjZjlmOWY5IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2VhZWFlYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9yYWRpYWxHcmFkaWVudD4KICA8cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMSIgaGVpZ2h0PSIxMDEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+background: -moz-radial-gradient(center, ellipse cover,  rgba(249,249,249,1) 26%, rgba(234,234,234,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(26%,rgba(249,249,249,1)), color-stop(100%,rgba(234,234,234,1))); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(249,249,249,1) 26%,rgba(234,234,234,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  rgba(249,249,249,1) 26%,rgba(234,234,234,1) 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  rgba(249,249,249,1) 26%,rgba(234,234,234,1) 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  rgba(249,249,249,1) 26%,rgba(234,234,234,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#eaeaea',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
 }
 
 .featured-article-image-main { float: left; margin: 40px; border: solid 5px #aeaeae; padding-bottom: 0px!important; }
 .featured-article-image-main .img-container { margin-bottom: -6px; }
-.featured-article-body-trimmed { border-bottom: solid 1px #aeaeae; padding-bottom: 10px; padding-right: 40px; padding-left: 20px; }
-.read-more { text-align: right; clear: both; }
+.featured-article-title { padding-top: 32px; padding-right: 20px;}
+.featured-article-body-trimmed { padding-bottom: 10px; padding-right: 40px; padding-left: 20px; }
+.read-more { text-align: right; clear: both; padding: 10px; text-transform: uppercase; border-top: 1px solid #aeaeae; width: 414px; margin-left: 400px;}
 
 .article-page-title { text-align: center; border-bottom: solid 1px #aeaeae; padding-bottom: 10px; }
 .article-second-wrapper { max-width: 364px; margin: 40px 20px 40px 40px; float: left; }
 .article-second-title { background: #eaeaea; text-align: center; padding-top: 5px; padding-bottom: 5px; }
 .article-second-title h2 { font-size: 120%; font-weight: 400; }
-.article-second-body { border-bottom: solid 1px #aeaeae; margin: 6px 16px; height: 300px; }
+.article-second-body { border-bottom: solid 1px #aeaeae; margin: 6px 16px; height: 230px; }
 .article-second-read-more { text-align: right; }
 
 /*----------FRONT PAGE BLOCKS-----------*/
@@ -556,8 +564,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f3f3', end
 .price-panel-block { margin-top: -6px; padding-left: 16px; float: left; min-width: 60px; max-width: 80px; }
 .price-panel-block-second {  clear: both; padding-top: 10px; padding-left: 10px; text-transform: uppercase; }
 .product-custom-pagers { margin-top: 40px; }
-.freepager-previous { padding-top: 18px; padding-right: 30px; padding-left: 18px; margin-right: 20px; border-left: solid 1px #aeaeae; }
+.freepager-previous { text-transform: uppercase;  padding-top: 18px; padding-right: 30px; padding-left: 18px; margin-right: 20px; border-left: solid 1px #aeaeae; }
 .freepager-next { text-transform: uppercase; padding-left: 8px; clear: both;  margin-top: -38px; }
+.freepager-previous a { color: #d2d0d0; }
+.freepager-next a { font-size: 120%; }
 
 /*----WHERE TO BUY BLOCK----*/
 .where-to-buy-box { margin-left: -5px; }
@@ -567,9 +577,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f3f3', end
 	margin-right: 5px;
 	}
 .how-to-header h2 {border-bottom: solid 1px #d2d0d0; padding-bottom: 6px;}
-.how-to-links {
-	float: left;
+.how-to-links-wrapper{
+
 }
+.how-to-links {
+	white-space: nowrap;
+	}
 .how-to-links a {} /*---this is moved to typography-custom.css---*/
 
 /*----------ADMIN DASHBOARD----------*/
@@ -638,16 +651,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f3f3', end
 .admin-metal-prices-wrapper { width: 100% }
 .admin-help-text { font-size: 1.3em; text-transform: uppercase; clear: both; margin: 20px 20px 10px 20px; }
 
-.create-products-nav { background: #eaeaea;}
-.manage-products-nav { background: #d2d2d2;}
-.manage-content-nav { background: #d2d7d7; }
-.manage-users-nav { background: #d2d2d2; }
+.create-products-nav { }
+.manage-products-nav { }
+.manage-content-nav {  }
+.manage-users-nav {  }
 .pub-op { clear: both; }
 .admin-static-pages {}
 .current-metal-prices { background: #eaeaea; padding: 20px; }
 
 .admin-create-content-page {  }
-.create-site-content { background: #aeaeae; }
+.create-site-content {  }
 
 /*---------SIDEBAR------*/
 
@@ -670,18 +683,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f3f3', end
 	text-align:center;
 	}
 .landing-page-grid-wrapper {
-	max-width: 200px;
+	max-width: 195px;
 	float: left;
 	margin-left: 9px;
-	margin-right: 9px;
+	margin-right: 9px;	
+	height: 336px;
 	} 
-	
+.landing-page-grid-wrapper .ring-title { 
+	margin-top: -5px;
+	}
+
 	/*landing page nav-links area*/
 	
 .landing-page-links-wrapper { width: 100%; font-size: 110%; border-bottom: solid 2px #eaeaea; min-height: 50px; text-transform: uppercase; padding-bottom: 8px;}
+.landing-page-links-wrapper img {
+	position: relative;
+	top: -5px;
+}
+
+
 .landing-page-subheader-wrapper { text-transform: none;  margin-right: 30px; margin-left: 20px; max-width: 300px; float: left; letter-spacing: .09em; color: #858585; font-weight: 300;}
 .landing-page-subheader-wrapper img {margin: 0 4px 0 0;}
-.landing-page-subheader { font-size: 1.1em; text-transform: uppercase; padding-top: 7px; letter-spacing: .08em;color: #515151;font-weight: 400;}
+.landing-page-subheader { font-size: 1.1em; text-transform: uppercase; padding-top: 7px; letter-spacing: .08em;color: #515151;font-weight: 400; white-space: nowrap;}
 .landing-page-links-wrapper-second {padding-top: 26px; max-width: 600px; float: right;}
 .landing-page-link-first { float: left; padding: 1px 9px; font-size: .83em;}
 .landing-page-link { float: left; font-weight: bold; padding: 1px 6px; border-right: solid 1px #aeaeae;font-size: .83em; }
@@ -689,8 +712,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f3f3', end
 .landing-page-link-last { float: left; padding: 1px 0px 1px 8px;font-size: .83em;}	
 .landing-page-link-last-active { float: left; padding: 1px 0px 1px 8px; }
 .landing-page-link-active { float: left; padding: 1px 6px; border-right: solid 1px #aeaeae; }	
-.engagement-landing .landing-page-subheader-wrapper { text-transform: none;  margin-right: 22px; margin-left: 20px; max-width: 355px; float: left; }
-.engagement-landing .landing-page-links-wrapper-second  { padding-top: 26px; max-width: 477px; float: left; }
+.engagement-landing .landing-page-subheader-wrapper { text-transform: none;  margin-right: 22px; margin-left: 0px; max-width: 355px; float: left; }
+.engagement-landing .landing-page-links-wrapper-second  { padding-top: 26px; max-width: 477px; float: right; }
 .engagement-landing .landing-page-link-last { float: left; padding: 1px 0px 1px 5px; font-weight: bold; }	
 .engagement-landing .landing-page-link-first { float: left; padding: 1px 5px; border-right: solid 1px #aeaeae; }
 .color-landing .landing-page-link-first { float: left; padding: 1px 5px; border-right: solid 1px #aeaeae; }
@@ -703,14 +726,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f3f3', end
 .pretty-page-title {}
 .static-page-banner-image { margin-right: auto; margin-left: auto; max-width: 749px; }
 
-.views-field-field-testimonial-signature { 
-	margin-left: -21px;
+.view-display-id-page_with_page_title_1 .views-field-field-testimonial-signature { 
+	margin-left: 0px;
 	margin-bottom: -12px;
+	text-align: right;
 	}
 .view-id-proposal_stories .view-all-link { margin-top: 8px; }
-.prop-story-title { border-bottom: solid 1px #f3f2f2; padding-bottom: -1px; }
-.testimonial-body { margin: 5px 30px; }
-.views-field-field-propstory-body .field-content { margin: 5px 30px; }
+.prop-story-title { padding-bottom: -1px; }
+.testimonial-body { margin: 5px 2px; }
+.views-field-field-propstory-body .field-content { margin: 5px 2px; }
 
 /*=====CREATE CONTENT FORM===*/
 .page-node-add input.form-text {
@@ -735,13 +759,42 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f3f3', end
 	margin-right: 10px;
 	}
 /*===SIMPLE NEWS BLOCK===*/
-#simplenews-block-form-4 input.form-submit {
-	width: 106px;
-	margin-top: -4px;
+#simplenews-block-form-4 {
+	width: 220px;
+	margin-top: 6px;
 	margin-left: 0px;
-	padding-left: 11px;
+	padding-left: 1px;
+	font-size: 80%;
+	
 }
+#simplenews-block-form-4 input.form-submit {
+	font-size: 100%;
+	margin-left: 0px;
 
+}
+.simplenews-subscribe .form-type-textfield {
+	width: 210px;
+	float: left;
+	margin-bottom: 3px;
+	}
+	
+form.simplenews-subscribe input.form-text {
+	background: white;
+	color: black;
+	width: 125px;
+	margin-right: 2px;
+	}
+form.simplenews-subscribe input.form-submit {
+	margin-top: 6px;
+	font-size: 100%;
+}	
+form.simplenews-unsubscribe  {
+	font-size: 100%;
+	padding-left: 15px;
+}
+form.simplenews-unsubscribe input.form-submit {
+	padding-left: 15px;
+	}
 /*====FORMS======*/
 .page-node-add .form-type-numberfield, .page-node-edit .form-type-numberfield{
 	font-size: 105%;
@@ -885,4 +938,41 @@ div.image-widget-data a {
 .page-node-edit div.field-type-image {
 	background: #f8f8f8;
 	padding: 1px 20px;
+	}
+	
+
+/*---Award Winners Detail Page---*/
+.award-information {
+	margin: 10px 0px;
+	font-weight: bold;
+	}
+.award-item-available {
+	font-style: italic;
+	}
+	
+/*======FIND A JEWELER PAGE======*/
+.find-a-jeweler-page {}	
+.find-a-jeweler-page .views-widget-filter-city { float: left; width: 220px; }
+.find-a-jeweler-page .views-widget-filter-province { float: left; width: 163px; }
+.find-a-jeweler-page .views-widget-filter-distance { float: left; width: 465px; }
+.find-a-jeweler-page .views-widget-filter-distance .views-widget { width: 100%; }
+.find-a-jeweler-page .views-widget-filter-distance .form-item-distance-postal-code { width: 120px; float: left; margin-right: 5px;}
+.find-a-jeweler-page .views-widget-filter-distance .form-item-distance-search-distance { width: 120px; float: left; clear: none; }
+.find-a-jeweler-page .views-widget-filter-distance .form-item-distance-search-units { width: 120px; float: left; clear: none; margin: 20px 5px 0px 5px;}
+.find-a-jeweler-page .views-submit-button { clear: both; position: absolute !important; top: 0px!important; left: 2px!important; margin-left: -67px !important; }
+.find-a-jeweler-page .views-reset-button { top: -47px !important; left: 0px !important; }	
+.find-a-jeweler-page .view-content { margin-top: 20px; }
+.find-a-jeweler-page input.form-text { background: #fff; border: 1px solid #aeaeae;}
+.find-a-jeweler-page select.form-select { border-radius: 5px; border: 1px solid #aeaeae; -moz-border-radius: 5px; color: #575757;}
+	
+	/*---misc---*/
+.block-menu-bottom-bar-menu {
+	font-size: 130%;
+	}
+	
+#main-content-zone-outter { border: none !important; }	
+
+.item-list li {
+	padding-left: 0px !important;
+	margin: 0 !important;
 	}

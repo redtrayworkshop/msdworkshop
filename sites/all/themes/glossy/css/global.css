@@ -11,7 +11,7 @@
 /*======================================================================================*/
 @import url('typography-default.css');
 @import url('typography-custom.css');
-@import url('glossy-mobile-composite.css');
+/*@import url('glossy-mobile-composite.css');*/
 @import url('shortcodes.css');
 @import url('responsive.css');
 
@@ -466,7 +466,7 @@ ul.sf-menu li li li.sfHover ul {
 .main-menu li ul{
 	background:	transparent none;
 	padding: 0;
-	padding-bottom: 2em;
+	padding-bottom: 0.01em;
 
 }
 
@@ -481,11 +481,11 @@ white-space: nowrap;
 
 .main-menu li:hover ul,
 .main-menu li.sfHover ul {
-	padding-top: 1em;
+	padding-top: 0em;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 	/*left:			0;*/
-	top:			2.4em;
+	top:			2.3em;
 	z-index:		99;
 	border-right: solid 1px #bababa;
 	border-left: solid 1px #bababa;
@@ -549,7 +549,7 @@ white-space: nowrap;
 #section-content
 {
 		background:#fff url('../img/content-section-bg.jpg') repeat-x left bottom;
-		border-top: 1px solid #ccc;
+		/*border-top: 1px solid #ccc;*/
 		padding: 0;
 }
 
@@ -594,7 +594,6 @@ white-space: nowrap;
 {
     color: #C6C6C6;
     padding: 0 0.8em;
-    text-shadow: 0 0.2em 0.1em #C6C6C6;
 }
 
 #breadcrumb a
@@ -753,6 +752,7 @@ div .block-menu li.last ul a
 	position: absolute;	
 	top: 15px;
 	right: 18px;
+	font-size: 80%;
 }
 
 #search-block-form .form-type-textfield
@@ -793,11 +793,10 @@ div .block-menu li.last ul a
 	height: 26px;
 	max-height: 36px;
 	line-height: 36px;
-
-}
-#search-block-form .form-actions input.form-submit {
-	
-	
+	border: 1px solid #aeaeae;
+	}
+#search-block-form .form-actions  {
+	width: 78% !important;	
 }
 /*	4.2.3.3	Calendar block
 -------------------------------------------------------------- */
@@ -1175,7 +1174,7 @@ ul.action-links a,
 .titled_box_title
 {
 	color: #ffffff;
-	border-width: 1px;
+	border-width: 0px;
 	border-style: solid;
 	border-radius: 5px;
 	moz-border-radius:5px;
@@ -1193,6 +1192,7 @@ ul.action-links a,
 	text-transform:uppercase;
 	margin: 5px 10px 5px 0;
 	font-weight: normal;
+	height: 28px;
 }
 
 div.zone-footer input.form-submit:hover,
@@ -1325,7 +1325,7 @@ div .alist ul li a
 
 .breadcrumb a.front
 {
-	background-position:0 -200px;
+	background-position:0 -198px;
 }
 
 .feed-icon span
