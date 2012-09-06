@@ -110,7 +110,7 @@ body div.region .site-slogan
 
 #zone-content #region-content,
 #zone-content #region-sidebar-second {
-	margin-top: -13px !important;
+	margin-top: -12px !important;
 }
 
 /*================================================================================================*/
@@ -972,7 +972,128 @@ div.image-widget-data a {
 	
 #main-content-zone-outter { border: none !important; }	
 
+.item-list {
+	display: block;
+	position: relative;
+	height: 40px;
+}
+
 .item-list li {
 	padding-left: 0px !important;
 	margin: 0 !important;
 	}
+
+	
+.item-list ul.pager {
+	margin: 25px auto;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	margin-left: -10%;
+	
+}
+
+.item-list ul.pager li {
+	margin-right: 5px !important;
+	text-align: center;
+	display: inline;
+	}
+	
+.item-list ul.pager li a {
+	color: #000;
+	padding: 3px 10px;
+	}
+	
+.item-list ul.pager li span {
+	color: #ccc;
+	padding: 3px 10px;
+	}	
+	
+/*====magazine articles====*/
+.magazine-article .header {
+	display: block;
+	width: 100%;
+	border-bottom: 1px solid #aeaeae;
+	text-transform: uppercase;
+	}
+.magazine-article .featured {
+	float: right;
+	}
+.magazine-article .header span {
+	margin-right: 5px;
+	font-weight: bold;
+	}
+.magazine-article .body-wrapper {
+	margin-top: 15px;
+	}
+.magazine-article .main-image {
+	float: right;
+	margin: 5px 5px;
+	}
+.magazine-article .main-image img {
+	border: 2px solid #aeaeae;
+	}
+.magazine-article .title {
+	text-transform: uppercase;
+	font-size: 200%;
+	text-align: center;
+	}
+.magazine-article .alt-image {
+	border-bottom: 1px solid #aeaeae;
+	}
+.article-page .pane-magazine-article-views .freepager-previous {
+	width: 124px;
+	}
+	
+/*=====wishlist====*/
+.view-wishlist .views-row {
+	margin-bottom: 40px;
+	height: 185px;
+}
+.wishlist-wrapper {
+	clear: both;
+	margin-top: 20px;
+	padding: 10px 0px;
+	border-top: 1px solid #aeaeae;
+	}
+.wishlist-wrapper .col1, .wishlist-wrapper .col2, .wishlist-wrapper .col3, .wishlist-wrapper .col4 {
+	float: left;
+	}
+
+.wishlist-wrapper .col1{
+	margin-right: 20px;
+	padding: 1px 10px;
+}
+
+.wishlist-wrapper .col2 {
+	max-width: 260px;
+}
+
+.wishlist-wrapper .col3 {
+	padding: 20px;
+	width: 185px;
+}	 
+.wishlist-wrapper .price-wrapper {
+	margin: 5px 1px;
+	padding: 1px 20px;
+	}
+.wishlist-wrapper .price {
+	font-weight: bold;
+	}
+.wishlist-wrapper .title {
+	margin-top: 30px;
+	}
+.wishlist-wrapper .image {
+	margin-top: 18px;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
