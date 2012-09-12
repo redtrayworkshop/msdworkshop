@@ -37,7 +37,7 @@
 				</div>
 					<?php if (theme_get_setting('glossy_display_contact_details')): ?>
 					<div class="grid-4">
-						<?php
+						<!--<?php
 							$contact_details = theme_get_setting('glossy_contact_details');
 							$contact_details = !empty($contact_details['value']) && !empty($contact_details['format']) ? check_markup($contact_details['value'], $contact_details['format']) : '';
 							print '<section id="contact-details">'
@@ -83,7 +83,7 @@
 							print '<h3>'. theme_get_setting('glossy_locationmap_contact_title') .'</h3>';
 							print $output; 
 							print '</section>';
-						?>
+						?>//-->
 					</div>
 					<?php endif; ?>
 			</div>

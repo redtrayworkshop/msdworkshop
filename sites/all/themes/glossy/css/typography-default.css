@@ -8,7 +8,7 @@
 /*===================================================================================*/
 body
 {
-    font: 12px/20px 'Lucida Grande', 'Lucida Sans Unicode',  sans-serif;
+    font: 13px/20px 'TitilliumText22LRegular', 'Lucida Grande', 'Lucida Sans Unicode',  sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, th,
@@ -48,7 +48,7 @@ h2 {
     font-size: 1.25em ! important;
     /*font-weight: 600!important;*/
     text-transform: uppercase;
-    letter-spacing: .07em!important;
+    letter-spacing: .07em;
 	line-height: 1.3em;
 }
 

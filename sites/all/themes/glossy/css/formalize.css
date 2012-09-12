@@ -65,7 +65,7 @@ input[type="week"] {
   outline: 0;
   font-family: Arial, sans-serif;
   font-size: 1em;
-  height: 3em;
+  /*height: 3em;*/
   line-height: 3em;
   *padding-top: 2px; /* IE7 */
   *padding-bottom: 1px; /* IE7 */

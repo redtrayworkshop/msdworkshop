@@ -1,4 +1,4 @@
-h1, h2, h3, h4, h5, h6, th,
+th,
 .portfolio-images .caption p, 
 .form-submit,
 div.zone-footer input.form-submit,
@@ -25,5 +25,3 @@ body,
 #header-main-content .navigation li li a,
 .block-views-node-bottom-blocks-about-author .block-title,
 .pullquote,.pullquote2,.pullquote3,.pullquote4, #recent-testimonials .inner{font-family: 'TitilliumText22LRegular' !important;}
-h1{font-family: 'ff-meta-web-pro' !important;}
-h2{font-family: 'ff-meta-web-pro' !important;}
