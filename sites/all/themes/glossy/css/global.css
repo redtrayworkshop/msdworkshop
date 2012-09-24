@@ -1351,14 +1351,14 @@ div.views-exposed-widget.views-widget-per-page label {
 }
 div.views-exposed-widget.views-submit-button {
 	position: relative;
-	top: -148px;
+	top: -140px;
 	left: 430px;
 	max-width: 85px;
 }
 div.views-exposed-widget.views-reset-button {
 	max-width: 85px;
 	position: relative;
-	top: -190px;
+	top: -172px;
 	left: 500px;
 }
 table.views-table.sticky-enabled.cols-6.tableheader-processed.sticky-table {
@@ -1449,15 +1449,26 @@ div.view.view-admin-award-winners table {
 .admin-pages .region-content-inner {
 	margin-top: -40px;
 }
-.admin-pages input.form-text {
+.page-dashboard-products input.form-text {
 	background: white;
 	font-size: 1.4em;
-	text-align: center;
+	text-align: left;
 	border: solid 1px #000;
 	border-radius: 0px;
 	-moz-border-radius: 0px;
-	font-size: 135%;
+	font-size: 118%;
 }
+.page-dashboard-products select.form-select {
+	padding: 8px;
+	}
+.page-dashboard-products .form-item-items-per-page {
+	margin-top: -3px;
+	margin-left: 7px;
+	}
+.page-dashboard-products-engagement-rings .view-filters {
+	margin-bottom: -100px;
+	}
+	
 div.view.view-admin-product-databases-gemstone table {
 	margin-top: -50px;
 }

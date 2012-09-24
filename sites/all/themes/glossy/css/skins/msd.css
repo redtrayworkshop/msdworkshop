@@ -282,15 +282,16 @@ legend .fieldset-legend {
 /* -----------blog (jewelry news) CSS------------ */
 .blog-date {
 	float: right;
-	margin-right: 15px;
+	margin-right: 0px;
 	text-align: center;
-	background: #eaeaea;
+	background: #fafafa;
 	border-style: solid;
 	border-width: 1px;
-	border-color: #000000;
+	border-color: #eee;
 	min-width: 35px;
 	padding: 6px;
 	margin-top: 3px;
+	border-radius: 5px;
 }
 .blog-date-number {
 	font-size: x-large;
@@ -301,7 +302,8 @@ legend .fieldset-legend {
 }
 .blog-feature-image {
 	float: left ! important;
-	margin-right: 10px;
+	margin-right: 20px;
+	margin-bottom: 20px;
 }
 .blog-body {
 	clear: left;
@@ -314,7 +316,7 @@ legend .fieldset-legend {
 }
 /*Added by Amanda*/
 .views-field-field-news-body {
-	margin-top: 30px;
+	margin-top: 50px;
 }
 /*---------------press article--------------- css*/
 .magazine-cover {
@@ -646,10 +648,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 	min-width: 120px;
 	text-align: center;
 }
-.action-link-image {
+.action-link-image, .action-link-image-social {
 	margin-left: auto;
 	margin-right: auto;
 }
+.action-link-image-social {
+	margin-top: 10px;
+	margin-bottom: -10px;
+	}
 .ratings-wrapper {
 	text-transform: lowercase;
 	margin-bottom: -19px;
@@ -1284,66 +1290,67 @@ div.image-widget-data a {
 .award-item-available {
 	font-style: italic;
 }
+
+
+
 /*======FIND A JEWELER PAGE======*/
-.find-a-jeweler-page {
-}
-.find-a-jeweler-page .views-widget-filter-city {
-	float: left;
-	width: 220px;
-}
-.find-a-jeweler-page .views-widget-filter-province {
-	float: left;
-	width: 163px;
-}
-.find-a-jeweler-page .views-widget-filter-distance {
-	float: left;
-	width: 465px;
-}
-.find-a-jeweler-page .views-widget-filter-distance .views-widget {
-	width: 100%;
-}
-.find-a-jeweler-page .views-widget-filter-distance .form-item-distance-postal-code {
-	width: 120px;
-	float: left;
-	margin-right: 5px;
-}
-.find-a-jeweler-page .views-widget-filter-distance .form-item-distance-search-distance {
-	width: 120px;
-	float: left;
-	clear: none;
-}
-.find-a-jeweler-page .views-widget-filter-distance .form-item-distance-search-units {
-	width: 120px;
-	float: left;
-	clear: none;
-	margin: 20px 5px 0px 5px;
-}
-.find-a-jeweler-page .views-submit-button {
-	clear: both;
-	position: absolute !important;
-	top: 69px!important;
-	left: 2px!important;
-	margin-left: -67px !important;
-}
-.find-a-jeweler-page .views-reset-button {
-	top: -47px !important;
-	left: 0px !important;
-}
-.find-a-jeweler-page .view-content {
-	margin-top: 20px;
-}
-.find-a-jeweler-page input.form-text {
-	background: #fff;
-	border: 1px solid #aeaeae;
-}
-.find-a-jeweler-page select.form-select {
-	border-radius: 5px;
-	border: 1px solid #aeaeae;
-	-moz-border-radius: 5px;
-	color: #575757;
-	padding: 7px;
-	margin-top: 1px;
-}
+
+	.find-a-jeweler-page .view-filters {
+		margin-bottom: 50px;
+		}
+	.find-a-jeweler-page .views-exposed-widgets .views-exposed-widget,
+	.find-a-jeweler-page #edit-distance-wrapper .views-widget,
+	.find-a-jeweler-page #edit-distance-wrapper .form-item {
+		float: left;
+		clear: none;
+		margin-right: 5px;
+		position: relative;
+		top: 0;
+		left: 0;
+		}
+	.find-a-jeweler-page #edit-city-wrapper,
+	.find-a-jeweler-page #edit-province-wrapper,
+	.find-a-jeweler-page #edit-distance-wrapper {
+		margin-top: -20px;
+		}
+	.find-a-jeweler-page #edit-distance-wrapper #edit-distance-search-units {
+		margin-top: 20px;
+		}	
+	.find-a-jeweler-page input#edit-city,
+	.find-a-jeweler-page input#edit-province {
+		width: 150px;
+		}
+	.find-a-jeweler-page input#edit-distance-postal-code,
+	.find-a-jeweler-page input#edit-distance-search-distance,
+	.find-a-jeweler-page select#edit-distance-search-units {
+		width: 100px;
+		}
+	.find-a-jeweler-page input#edit-reset,
+	.find-a-jeweler-page input#edit-submit-retail-locations {
+		margin: 0;
+		position: relative;
+		top: 0;
+		padding: 3px 15px;
+		}
+	.find-a-jeweler-page input.form-text {
+		background: #fff;
+		border: 1px solid #aeaeae;
+		font-size: 11px;
+		}
+	.find-a-jeweler-page select.form-select {
+		border-radius: 5px;
+		border: 1px solid #aeaeae;
+		-moz-border-radius: 5px;
+		color: #575757;
+		padding: 7px;
+		font-size: 11px;
+		}
+	.find-a-jeweler-page input.form-text.form-autocomplete {
+		background-position: 99.75% 0.8em;
+		}
+
+
+
 /*---misc---*/
 .block-menu-bottom-bar-menu {
 	font-size: 130%;
@@ -1380,6 +1387,15 @@ div.image-widget-data a {
 	color: #ccc;
 	padding: 3px 10px;
 }
+
+.node-type-mens-wedding-band .product-main-image {
+	width: 480px;
+	}
+
+.view-proposal-stories .body {
+	text-indent: -19px;
+	}
+	
 /*====magazine articles====*/
 .magazine-article .header {
 	display: block;
@@ -1455,6 +1471,19 @@ div.image-widget-data a {
 }
 
 
+
+
+
+/*======================= ARTICLES =============================*/
+
+
+.view-jewelry-news-views .view-content .views-row{}
+
+
+
+
+
+
 /*======================= OVERRIDES =============================*/
 
 #block-views-front-page-blocks-block .img-container img {
@@ -1489,6 +1518,20 @@ div.image-widget-data a {
 	padding: 0;
 	clear: none;
 }
+
+
+blockquote:after {
+	width: 30px;
+	height: 30px;
+	background-image: url("../../img/shortcodes/sprites/custom_sprite_ab998f.png");
+	background-position: -1000px -880px;
+    background-repeat: no-repeat;
+	content: '\0000a0' !important;
+	display: inline-block;
+	position: relative;
+	top: 0px;
+	left: 18px;
+	}
 
 
 
@@ -1532,3 +1575,42 @@ border-top: 1px solid #eaeaea;padding-top: 6px;}
 .site-slogan {font-size: 1em;color: #363636!important; font-family: "ff-meta-serif-web-pro",serif!important; font-weight: 400; font-style: italic; letter-spacing: .05em;}
 
 
+/*========FRONT PAGE=======*/
+.view-id-front_page  {
+	margin-top: -45px;
+	}
+.front-page-wrapper  .banner-image img {
+	margin-right: auto;
+	margin-left: 12px;
+	}
+.front-page-wrapper .transparency {
+	height: 176px;
+	background: #aeaeae;
+	opacity: 0.5;
+	margin-top: -182px;
+	margin-left: 12px;
+	width: 1077px;
+	}
+.front-page-wrapper .blocks {
+	width: 100%;
+	margin-left: 16px;
+	margin-top: -171px;
+	}
+.front-page-wrapper .blocks .image {
+	background: #eaeaea;
+	width: 339px;
+	float: left;
+	padding: 8px;
+	}
+.front-page-wrapper .blocks .image img {
+	border: 2px solid #aeaeae;
+	}
+.front-page-wrapper .front-body {
+	width: 1057px;
+	margin-left: 12px;
+	padding: 20px;
+	margin-top: 193px;
+	}
+.front-page-wrapper .links {
+	margin-right: 25px;
+	}
